@@ -220,9 +220,20 @@ p, li, figcaption { text-wrap: pretty; }
 .work-figure strong { font-family: var(--display); font-size: 40px; font-weight: 500; color: var(--rose-ink); line-height: 1; white-space: nowrap; }
 .work-figure span { font-family: var(--mono); font-size: 12.5px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
 
-/* Video frames (Music) */
+/* Video frames (Music): a cover photo with a play button until the visitor starts the video */
 .video-frame { margin: 0; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--line); background: #000; }
 .video-frame iframe { display: block; width: 100%; aspect-ratio: 16 / 9; border: 0; }
+.yt-cover { position: relative; display: block; }
+.yt-cover img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
+.yt-cover:focus-visible { outline-color: var(--rose); outline-offset: -5px; }
+.yt-play {
+  position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);
+  width: clamp(56px, 11%, 76px); aspect-ratio: 1; display: grid; place-items: center;
+  border-radius: 50%; background: var(--rose); color: var(--on-rose);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.35); transition: transform 0.15s ease;
+}
+.yt-play svg { width: 42%; height: 42%; margin-left: 6%; }
+.yt-cover:hover .yt-play, .yt-cover:focus-visible .yt-play { transform: translate(-50%, -50%) scale(1.06); }
 
 /* Home: experience list and music */
 .exp-list { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
@@ -348,5 +359,5 @@ p, li, figcaption { text-wrap: pretty; }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .btn, .work h3, .exp-org { transition: none; }
+  .btn, .work h3, .exp-org, .yt-play { transition: none; }
 }

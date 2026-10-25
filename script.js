@@ -13,6 +13,23 @@ document.querySelectorAll(".theme-toggle").forEach((btn) => {
 
 document.querySelectorAll("[data-year]").forEach((el) => { el.textContent = new Date().getFullYear(); });
 
+// A YouTube recording starts as a cover photo. Clicking it swaps in the player and starts the video;
+// without JavaScript (or with a modifier key) the cover is a plain link to the video on YouTube.
+document.querySelectorAll(".yt-cover").forEach((cover) => {
+  cover.addEventListener("click", (e) => {
+    if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+    e.preventDefault();
+    const player = document.createElement("iframe");
+    player.src = `https://www.youtube-nocookie.com/embed/${cover.dataset.yt}?autoplay=1&rel=0`;
+    player.title = cover.dataset.title;
+    player.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+    player.referrerPolicy = "strict-origin-when-cross-origin";
+    player.allowFullscreen = true;
+    cover.replaceWith(player);
+    player.focus();
+  });
+});
+
 // Wave canvases come in two modes.
 // "string": a string of length 1 plucked at x = 0.3 and released from rest. Its motion is
 //   d'Alembert's solution of the wave equation, u(x, t) = ½ [F(x − ct) + F(x + ct)],
