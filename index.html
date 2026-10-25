@@ -12,7 +12,7 @@
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400..700&family=Caveat:wght@500;600&family=DM+Mono:wght@400;500&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400..700&family=Caveat:wght@500;600&family=DM+Mono:wght@400;500&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <script>try{var t=localStorage.getItem("theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
 </head>
@@ -24,8 +24,8 @@
       <a class="wordmark" href="index.html">Skylar <em>Tian</em></a>
       <nav class="site-nav" aria-label="Main">
         <a href="index.html" aria-current="page">Home</a>
-        <a href="experience.html">Experience</a>
         <a href="research.html">Research</a>
+        <a href="experience.html">Experience</a>
         <a href="music.html">Music</a>
       </nav>
       <div class="header-actions">
@@ -105,19 +105,13 @@
       <div class="wrap">
         <header class="section-head">
           <div>
-            <p class="eyebrow">Selected work</p>
-            <h2>Models I've built</h2>
+            <p class="eyebrow">Research</p>
+            <h2>What I'm studying</h2>
           </div>
-          <a class="more" href="research.html">All research &rarr;</a>
+          <a class="more" href="research.html">Full timeline &rarr;</a>
         </header>
 
         <div class="work-grid">
-          <a class="work" href="research.html#salience">
-            <p class="work-org">E Fund Management · Hong Kong</p>
-            <h3>Deviation salience strategy</h3>
-            <p>Industry-relative salience signals and double-sorted portfolios on Chinese A-shares, tested with Fama–MacBeth regressions and Newey–West inference.</p>
-            <p class="work-figure"><strong>7</strong><span>portfolio specifications</span></p>
-          </a>
           <a class="work" href="research.html#neural">
             <p class="work-org">Zuckerman Institute · Paninski Lab</p>
             <h3>Neural dynamics and behavior</h3>
@@ -130,59 +124,58 @@
             <p>A vehicle-routing model over 528 NYC food pantries and community kitchens, comparing five allocation policies weighted by food insecurity.</p>
             <p class="work-figure"><strong>57.7%</strong><span>high-need coverage, up from 26.3%</span></p>
           </a>
-          <a class="work" href="research.html#copper">
-            <p class="work-org">Columbia Alpha Partners</p>
-            <h3>Structural copper pricing</h3>
-            <p>Turned supply disruptions and demand from AI data centers, electric vehicles and grid build-out into a structural model of the copper price.</p>
-            <p class="work-figure"><strong>500</strong><span>Monte Carlo simulations</span></p>
+          <a class="work" href="research.html#reading">
+            <p class="work-org">Columbia Mathematics · Directed Reading</p>
+            <h3>Algebraic topology</h3>
+            <p>A semester of mentored, proof-based reading on homotopy, fundamental groups and introductory homology, ending in a talk at the closing colloquium.</p>
+            <p class="work-figure"><strong>1 of 10</strong><span>undergraduates selected</span></p>
+          </a>
+          <a class="work" href="research.html#sumac">
+            <p class="work-org">Stanford Mathematics Camp · SUMaC</p>
+            <h3>Abstract algebra</h3>
+            <p>Proof-driven work on the homomorphism theorems and introductory Galois theory, with a final project on the algebra behind elliptic curve cryptography.</p>
+            <p class="work-figure"><strong>1 of 64</strong><span>students selected</span></p>
           </a>
         </div>
       </div>
     </section>
 
     <section class="section section-alt">
-      <div class="wrap video-split">
-        <div class="copy">
-          <p class="eyebrow">Video</p>
-          <h2>A short hello</h2>
-          <p>Drone footage, the math department's open house, and friends. It first ran on my old website.</p>
-        </div>
-        <figure class="video-frame">
-          <video controls playsinline preload="none" poster="assets/img/intro-poster.jpg" width="1280" height="720">
-            <source src="assets/video/intro.mp4" type="video/mp4">
-          </video>
-        </figure>
+      <div class="wrap">
+        <header class="section-head">
+          <div>
+            <p class="eyebrow">Experience</p>
+            <h2>Where I've worked</h2>
+          </div>
+          <a class="more" href="experience.html">Full experience &rarr;</a>
+        </header>
+
+        <ul class="exp-list">
+          <li><a href="experience.html#xpulse"><span class="exp-org">XPulse</span><span class="exp-role">Software Developer</span><span class="exp-when">May 2026 – Present</span></a></li>
+          <li><a href="experience.html#worldwide"><span class="exp-org">Worldwide Capital Corporation</span><span class="exp-role">Investment Banking Spring Analyst</span><span class="exp-when">Mar – Apr 2026</span></a></li>
+          <li><a href="experience.html#efund"><span class="exp-org">E Fund Management</span><span class="exp-role">Quantitative Research Winter Analyst</span><span class="exp-when">Dec 2025 – Feb 2026</span></a></li>
+          <li><a href="experience.html#musewav"><span class="exp-org">MuseWav Group</span><span class="exp-role">Co-founder, Software Developer</span><span class="exp-when">Dec 2025 – Present</span></a></li>
+          <li><a href="experience.html#alpha"><span class="exp-org">Columbia Alpha Partners</span><span class="exp-role">Executive Board, Treasurer</span><span class="exp-when">Sep 2025 – Present</span></a></li>
+          <li><a href="experience.html#jane-street"><span class="exp-org">Jane Street</span><span class="exp-role">Participant, WiSE Program</span><span class="exp-when">Jun – Jul 2025</span></a></li>
+        </ul>
       </div>
     </section>
 
     <section class="section">
-      <div class="wrap">
-        <header class="section-head">
-          <div>
-            <p class="eyebrow">Off the clock</p>
-            <h2>Life outside the models</h2>
-          </div>
-          <a class="more" href="music.html">Watch my performances &rarr;</a>
-        </header>
-
-        <div class="gallery">
-          <figure class="g-wide g-tall"><img src="assets/img/choir.jpg" width="1400" height="933" loading="lazy" alt="Skylar singing a solo in front of a choir"></figure>
-          <figure class="g-wide g-tall"><img src="assets/img/beach.jpg" width="1400" height="1050" loading="lazy" alt="Skylar jumping on a beach under a blue sky"></figure>
-          <figure class="g-tall"><img src="assets/img/track.jpg" width="825" height="1100" loading="lazy" alt="Skylar and a friend on a running track"></figure>
-          <figure class="g-tall"><img src="assets/img/daisies.jpg" width="825" height="1100" loading="lazy" alt="Skylar and a friend with a crown of daisies"></figure>
-          <figure class="g-tall"><img src="assets/img/friend.jpg" width="825" height="1100" loading="lazy" alt="Skylar and a friend taking a selfie"></figure>
-          <figure class="g-tall"><img src="assets/img/group.jpg" width="825" height="1100" loading="lazy" alt="Skylar with a group of friends"></figure>
-          <figure class="g-wide g-tall"><img src="assets/img/seaside.jpg" width="1200" height="900" loading="lazy" alt="Skylar on a rocky shoreline on a sunny day"></figure>
-          <figure class="g-tall g-wide-sm"><img src="assets/img/with-cat.jpg" width="988" height="1500" loading="lazy" alt="Skylar seated on the floor, holding a fluffy cat, beside a strawberry cake"></figure>
-          <div class="note">
-            <h3>Outside class</h3>
-            <ul>
-              <li>Columbia Sailing Team</li>
-              <li>Harp, operatic singing, flute, guitar and piano</li>
-              <li>Undergraduate Math Journal</li>
-              <li>Treasurer, Columbia Alpha Partners</li>
-            </ul>
-          </div>
+      <div class="wrap music-split">
+        <figure class="arch squat music-photo">
+          <img src="assets/img/choir.jpg" width="1400" height="933" loading="lazy" alt="Skylar singing a solo in front of a choir">
+        </figure>
+        <div class="music-copy">
+          <p class="eyebrow">Music</p>
+          <h2>On stage</h2>
+          <p>I sing opera and play harp, flute, guitar and piano. Three recorded performances are on the music page.</p>
+          <ul class="rec-list">
+            <li><span class="rec-piece">Als Luise die Briefe ihres ungetreuen Liebhabers verbrannte</span><span class="rec-who">Mozart</span></li>
+            <li><span class="rec-piece">Im Frühling</span><span class="rec-who">Schubert</span></li>
+            <li><span class="rec-piece">Stars Shining in the Sky</span><span class="rec-who">Flute and piano</span></li>
+          </ul>
+          <a class="more" href="music.html">Watch the performances &rarr;</a>
         </div>
       </div>
     </section>
@@ -206,8 +199,8 @@
     <div class="wrap footer-inner">
       <p>© <span data-year>2026</span> Skylar Tian · New York, NY <i class="heart" aria-hidden="true"></i></p>
       <nav aria-label="Footer">
-        <a href="experience.html">Experience</a>
         <a href="research.html">Research</a>
+        <a href="experience.html">Experience</a>
         <a href="music.html">Music</a>
         <a href="mailto:h.tian@columbia.edu">Email</a>
       </nav>

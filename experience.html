@@ -4,13 +4,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Experience · Skylar Tian</title>
-  <meta name="description" content="Skylar Tian's experience in quantitative finance, research, and software, plus education and skills.">
+  <meta name="description" content="Skylar Tian's experience in finance, software and leadership, plus education and skills. Research is on its own page.">
   <meta property="og:title" content="Experience · Skylar Tian">
   <meta property="og:image" content="https://skylarhezhentian.github.io/personal-website/assets/img/headshot.jpg">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400..700&family=Caveat:wght@500;600&family=DM+Mono:wght@400;500&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400..700&family=Caveat:wght@500;600&family=DM+Mono:wght@400;500&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <script>try{var t=localStorage.getItem("theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
 </head>
@@ -22,8 +22,8 @@
       <a class="wordmark" href="index.html">Skylar <em>Tian</em></a>
       <nav class="site-nav" aria-label="Main">
         <a href="index.html">Home</a>
-        <a href="experience.html" aria-current="page">Experience</a>
         <a href="research.html">Research</a>
+        <a href="experience.html" aria-current="page">Experience</a>
         <a href="music.html">Music</a>
       </nav>
       <div class="header-actions">
@@ -42,45 +42,42 @@
         <div class="title-block">
           <p class="hello">where I've worked <i class="heart" aria-hidden="true"></i></p>
           <h1 class="page-title">Experience</h1>
-          <p class="lede">Quantitative finance, research and software, grouped by kind of work and listed most recent first within each group.</p>
+          <p class="lede">Finance, software and leadership, most recent first within each group. My research has its own <a href="research.html">timeline</a>.</p>
         </div>
       </div>
     </section>
 
     <div class="wrap">
-      <section class="group" aria-labelledby="g-quant">
-        <h2 class="group-title" id="g-quant">Quantitative finance</h2>
+      <section class="group" aria-labelledby="g-finance">
+        <h2 class="group-title" id="g-finance">Finance</h2>
 
-        <article class="role">
-          <div class="role-when"><span>Sep 2025 – Present</span><span>New York, NY</span></div>
+        <article class="role" id="worldwide">
+          <div class="role-when"><span>Mar 2026 – Apr 2026</span><span>New York, NY</span></div>
           <div class="role-body">
-            <h3>Columbia Alpha Partners</h3>
-            <p class="role-title">Executive Board, Treasurer</p>
+            <h3>Worldwide Capital Corporation</h3>
+            <p class="role-title">Investment Banking Spring Analyst</p>
             <ul class="points">
-              <li>Led an investment pod's copper research, translating geopolitical supply disruptions and demand from AI data centers, electric vehicles and grid infrastructure into a structural pricing model estimated with 500 Monte Carlo simulations.</li>
+              <li>Sourced acquisition and financing opportunities in petroleum terminals and midstream infrastructure, screening U.S. terminal operators by location, capacity, product mix, ownership and transportation.</li>
+              <li>Evaluated prospective deals through company- and asset-level research, drawing on public filings, industry data, transaction materials and comparable assets to judge deal rationale and client fit.</li>
+              <li>Supported deal origination by building target and investor pipelines, identifying owners, operators and counterparties, drafting tailored outreach and joining client calls.</li>
             </ul>
-            <ul class="chips"><li>Commodities</li><li>Structural modeling</li><li>Monte Carlo</li></ul>
           </div>
         </article>
 
-        <article class="role">
+        <article class="role" id="efund">
           <div class="role-when"><span>Dec 2025 – Feb 2026</span><span>Hong Kong</span></div>
           <div class="role-body">
             <h3>E Fund Management</h3>
             <p class="role-title">Quantitative Research Winter Analyst</p>
             <ul class="points">
-              <li>Replicated the Carhart four-factor and Fama–French five-factor asset pricing models on Chinese A-share equities, adapting factor construction, portfolio formation and regression frameworks to the market's structure and regulatory environment.</li>
+              <li>Replicated the Carhart four-factor and Fama–French five-factor models on Chinese A-shares, adapting factor construction, portfolio formation and regressions to the market's structure and regulation.</li>
+              <li>Built a reproducible Python pipeline for a deviation salience strategy on 2021–2025 Chinese equities, using industry-relative signals and double-sorted portfolios to test next-month momentum and reversal.</li>
+              <li>Evaluated seven portfolio specifications with Fama–MacBeth regressions controlling for size, momentum and volatility, using Newey–West inference and missing-return sensitivity tests.</li>
             </ul>
-            <p class="subproject">Project · Deviation salience trading strategy</p>
-            <ul class="points">
-              <li>Built a reproducible Python pipeline over Chinese equities from 2021 to 2025, constructing industry-relative salience signals and double-sorted portfolios to test next-month momentum and reversal under equal and value weighting.</li>
-              <li>Evaluated seven portfolio specifications and ran Fama–MacBeth regressions with size, momentum and volatility controls, using Newey–West inference and missing-return sensitivity tests.</li>
-            </ul>
-            <ul class="chips"><li>Factor models</li><li>Fama–MacBeth</li><li>Newey–West</li><li>Python</li></ul>
           </div>
         </article>
 
-        <article class="role">
+        <article class="role" id="jane-street">
           <div class="role-when"><span>Jun 2025 – Jul 2025</span><span>New York, NY</span></div>
           <div class="role-body">
             <h3>Jane Street</h3>
@@ -89,76 +86,14 @@
               <li>Selected as 1 of 100 students for an intensive program on trading, market-making and decision theory.</li>
               <li>Built and analyzed cross-sector trading models in simulated markets using probability, expected value and capital allocation.</li>
             </ul>
-            <ul class="chips"><li>Market-making</li><li>Expected value</li><li>Decision theory</li></ul>
-          </div>
-        </article>
-      </section>
-
-      <section class="group" aria-labelledby="g-research">
-        <h2 class="group-title" id="g-research">Research</h2>
-
-        <article class="role">
-          <div class="role-when"><span>Jun 2026 – Present</span><span>New York, NY</span></div>
-          <div class="role-body">
-            <h3>Columbia Zuckerman Institute</h3>
-            <p class="role-title">Undergraduate Researcher, Computational Neuroscience</p>
-            <ul class="points">
-              <li>Selected as 1 of 10 students for a competitive research program, working with computational neuroscientist Liam Paninski.</li>
-            </ul>
-            <p class="subproject">Project · Neural dynamics and behavior prediction</p>
-            <ul class="points">
-              <li>Benchmarked lfpack and autoencoder representations of local field potentials against raw recordings, keeping neural dynamics at high temporal resolution while cutting spatial dimension by 95%.</li>
-              <li>Modeled simultaneous recordings across brain regions with shared and region-specific latent components, using HMMs and switching linear dynamical systems to study global and local dynamics.</li>
-              <li>Ongoing: comparing continuous, discrete and hierarchical brain-state models to characterize dimensionality and timescales, toward a dynamic brain atlas.</li>
-            </ul>
-            <ul class="chips"><li>State-space models</li><li>HMM</li><li>SLDS</li><li>Autoencoders</li></ul>
-          </div>
-        </article>
-
-        <article class="role">
-          <div class="role-when"><span>May 2026 – Aug 2026</span><span>New York, NY</span></div>
-          <div class="role-body">
-            <h3>Laidlaw Foundation</h3>
-            <p class="role-title">Student Researcher, Applied Mathematics</p>
-            <ul class="points">
-              <li>Built a Python and Google OR-Tools routing model for 528 NYC food pantries and community kitchens, integrating OSRM travel times, vehicle capacities and service windows to compare five allocation policies that incorporate food insecurity rates.</li>
-              <li>Quantified the equity–reach tradeoff across five solves per policy: need-prioritized routing raised median coverage of high-need demand from 26.3% to 57.7% with a marginal decrease in reach, and tested sensitivity with skip-penalty perturbations.</li>
-            </ul>
-            <ul class="chips"><li>Vehicle routing</li><li>OR-Tools</li><li>Sensitivity analysis</li></ul>
-          </div>
-        </article>
-
-        <article class="role">
-          <div class="role-when"><span>Jan 2026 – Present</span><span>New York, NY</span></div>
-          <div class="role-body">
-            <h3>Columbia Undergraduate Research</h3>
-            <p class="role-title">Researcher, Algebraic Topology</p>
-            <ul class="points">
-              <li>Selected as 1 of 10 undergraduates for a semester-long mentored study in mathematics under PhD researcher Azelie Picot, through the math department's <a href="https://www.math.columbia.edu/programs-math/undergraduate-program/undergraduate-research/drp/">Directed Reading Program</a>.</li>
-              <li>Conducted independent, proof-based reading in algebraic topology on homotopy, fundamental groups and introductory homology, and presented the work formally at the program's closing colloquium.</li>
-            </ul>
-            <ul class="chips"><li>Algebraic topology</li><li>Homotopy</li><li>Fundamental groups</li></ul>
-          </div>
-        </article>
-
-        <article class="role">
-          <div class="role-when"><span>Jun 2024 – Aug 2024</span><span>Stanford, CA</span></div>
-          <div class="role-body">
-            <h3>Stanford University Mathematics Camp (SUMaC)</h3>
-            <p class="role-title">Student Researcher, Abstract Algebra Track</p>
-            <ul class="points">
-              <li>One of only 64 students selected for SUMaC Program I, an intensive math camp focused on abstract algebra and number theory.</li>
-              <li>Collaborated with peers and graduate TAs on proof-driven problem sets, explored the homomorphism theorems and introductory Galois theory, and presented a final project applying algebraic reasoning to elliptic curve cryptography.</li>
-            </ul>
-            <ul class="chips"><li>Abstract algebra</li><li>Galois theory</li><li>Cryptography</li></ul>
           </div>
         </article>
       </section>
 
       <section class="group" aria-labelledby="g-software">
-        <h2 class="group-title" id="g-software">Software</h2>
+        <h2 class="group-title" id="g-software">Software and startups</h2>
 
-        <article class="role">
+        <article class="role" id="xpulse">
           <div class="role-when"><span>May 2026 – Present</span><span>New York, NY</span></div>
           <div class="role-body">
             <h3>XPulse</h3>
@@ -166,9 +101,57 @@
             <ul class="points">
               <li>Engineered a weekly publishing pipeline on FastAPI, Supabase PostgreSQL and Railway workers, with scheduling and concurrency controls that keep background tasks and episodes reliable.</li>
               <li>Upgraded content selection and OpenAI speech generation to newer audio models, and added Mutagen duration checks that hold episodes to 15–20 minutes.</li>
-              <li>Automated cover-art generation with reference-conditioned Gemini prompts, with checks on image integrity, anatomy, framing and provenance before a push-notification review gates publication.</li>
+              <li>Automated cover-art generation with reference-conditioned Gemini prompts, checking image integrity, anatomy, framing and provenance before a final review gates publication.</li>
             </ul>
-            <ul class="chips"><li>FastAPI</li><li>PostgreSQL</li><li>Pipelines</li></ul>
+          </div>
+        </article>
+
+        <article class="role" id="musewav">
+          <div class="role-when"><span>Dec 2025 – Present</span><span>New York, NY</span></div>
+          <div class="role-body">
+            <h3>MuseWav Group</h3>
+            <p class="role-title">Co-founder, Software Developer</p>
+            <ul class="points">
+              <li>Co-founded an AI and music startup and designed its online platform to raise creator earnings, modeling pricing, fee structures and expected lifetime value for independent producers.</li>
+              <li>Developed blockchain-based tokenization for music assets and early AI-generated music features built on pattern extraction and audio-signal embeddings.</li>
+            </ul>
+          </div>
+        </article>
+      </section>
+
+      <section class="group" aria-labelledby="g-leadership">
+        <h2 class="group-title" id="g-leadership">Leadership and activities</h2>
+
+        <article class="role" id="sailing">
+          <div class="role-when"><span>Sep 2026 – Present</span><span>New York, NY</span></div>
+          <div class="role-body">
+            <h3>Columbia University Sailing</h3>
+            <p class="role-title">Race Team, Skipper</p>
+            <ul class="points">
+              <li>Raced for Columbia's student sailing club in intercollegiate regattas, at the helm or on crew as needed.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="role" id="alpha">
+          <div class="role-when"><span>Sep 2025 – Present</span><span>New York, NY</span></div>
+          <div class="role-body">
+            <h3>Columbia Alpha Partners</h3>
+            <p class="role-title">Executive Board, Treasurer</p>
+            <ul class="points">
+              <li>Led an investment pod's copper research, translating geopolitical supply disruptions and demand from AI data centers, electric vehicles and grid infrastructure into a structural pricing model estimated with 500 Monte Carlo simulations.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="role" id="math-society">
+          <div class="role-when"><span>Sep 2025 – Present</span><span>New York, NY</span></div>
+          <div class="role-body">
+            <h3>Undergraduate Math Society</h3>
+            <p class="role-title">Executive Board Member</p>
+            <ul class="points">
+              <li>Organized math talks with faculty and graduate students to build the undergraduate math community.</li>
+            </ul>
           </div>
         </article>
       </section>
@@ -191,7 +174,7 @@
               </div>
               <div>
                 <h3>Before Columbia</h3>
-                <ul><li>USAMO participant</li><li>AIME 11/15</li><li>USAPhO qualifier</li><li>Stanford Math Camp (SUMaC)</li><li>SAT 1590/1600</li></ul>
+                <ul><li>USAMO participant</li><li>AIME 11/15</li><li>USAPhO qualifier</li><li>SAT 1590/1600</li></ul>
               </div>
               <div>
                 <h3>Skills</h3>
