@@ -17,9 +17,10 @@ document.querySelectorAll("[data-year]").forEach((el) => { el.textContent = new 
 // "string": a string of length 1 plucked at x = 0.3 and released from rest. Its motion is
 //   d'Alembert's solution of the wave equation, u(x, t) = ½ [F(x − ct) + F(x + ct)],
 //   where F is the odd, 2-periodic extension of the initial triangle.
-// "modes": the same string above its first four normal modes, sin(nπx) cos(nωt).
+// "modes": the same string above its first six normal modes, sin(nπx) cos(nωt).
 const reduceMotion = matchMedia("(prefers-reduced-motion: reduce)").matches;
 const PLUCK = 0.3;
+const MODES = 6;
 
 function pluckShape(s) {
   let r = ((s % 2) + 2) % 2;
@@ -70,7 +71,8 @@ class Wave {
     else this.drawString();
   }
 
-  // One plucked string with a short trail of earlier positions.
+  // One plucked string with a short trail of earlier positions, inside a dotted outline
+  // of its full range: the string never leaves the starting triangle or its mirror image.
   plucked(x0, len, y0, amp, roseInk, rose, line) {
     const { ctx } = this;
     const ct = this.phase / Math.PI;
@@ -82,6 +84,17 @@ class Wave {
     ctx.moveTo(x0, y0);
     ctx.lineTo(x0 + len, y0);
     ctx.stroke();
+
+    ctx.setLineDash([2, 5]);
+    ctx.strokeStyle = rose;
+    ctx.lineWidth = 1.25;
+    [-1, 1].forEach((side) => {
+      ctx.beginPath();
+      ctx.moveTo(x0, y0);
+      ctx.lineTo(x0 + PLUCK * len, y0 + side * amp);
+      ctx.lineTo(x0 + len, y0);
+      ctx.stroke();
+    });
     ctx.setLineDash([]);
 
     const curve = (t) => {
@@ -92,11 +105,11 @@ class Wave {
       }
     };
 
-    const step = this.animate ? 0.04 : 0.12;
+    const step = this.animate ? 0.05 : 0.12;
     ctx.strokeStyle = rose;
-    ctx.lineWidth = 1.25;
+    ctx.lineWidth = 1.5;
     for (let g = 5; g >= 1; g--) {
-      ctx.globalAlpha = 0.55 * (1 - g / 6);
+      ctx.globalAlpha = 0.75 * (1 - g / 6);
       curve(ct - g * step);
       ctx.stroke();
     }
@@ -104,7 +117,7 @@ class Wave {
 
     curve(ct);
     ctx.strokeStyle = roseInk;
-    ctx.lineWidth = 2;
+    ctx.lineWidth = 2.5;
     ctx.stroke();
 
     ctx.fillStyle = roseInk;
@@ -130,7 +143,7 @@ class Wave {
     const len = w - labelW - 6;
 
     // The string row gets 1.6 units of height, each mode row gets 1.
-    const unit = (h - pad * 2) / 5.6;
+    const unit = (h - pad * 2) / (MODES + 1.6);
     const yString = pad + unit * 0.8;
     this.plucked(x0, len, yString, unit * 0.68, roseInk, rose, line);
     if (this.labels) {
@@ -138,7 +151,7 @@ class Wave {
       ctx.fillText("u(x, t)", 0, yString);
     }
 
-    for (let n = 1; n <= 4; n++) {
+    for (let n = 1; n <= MODES; n++) {
       const y0 = pad + unit * (1.1 + n);
       const a = unit * 0.36 * Math.cos(n * this.phase);
       ctx.beginPath();
@@ -166,7 +179,7 @@ class Wave {
 
   tick(t) {
     if (this.animate && this.visible) {
-      this.phase = t * 0.0014;
+      this.phase = t * 0.0026;
       this.draw();
     }
   }

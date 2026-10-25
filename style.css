@@ -1,7 +1,7 @@
 /* Layout: a concert-program column (max 1120px) with arched photo frames and a
    plucked string that moves as the wave equation predicts. Blush paper by
    default, plum night in dark mode, soft pink as the one highlight color.
-   No italics anywhere except the math variables KaTeX sets. */
+   No italics anywhere. */
 :root {
   --paper: #fdf8f8;
   --paper-2: #f8edf0;
@@ -79,6 +79,9 @@ h2 { font-size: clamp(34px, 4.6vw, 54px); letter-spacing: -0.01em; }
 h3 { font-size: 26px; }
 p { margin: 0; }
 em, i { font-style: normal; }
+/* Keep a lone word off the last line of a paragraph or bullet; balance short labels instead */
+p, li, figcaption { text-wrap: pretty; }
+.note li, .edu-grid li, .tl-sub, .role-title, .subproject, .piece, .work-figure span, .stat-note { text-wrap: balance; }
 
 .wrap {
   max-width: var(--maxw);
@@ -155,7 +158,7 @@ em, i { font-style: normal; }
 }
 
 /* Wave canvases: a plucked string (Home, Music), and on Research the same string over its normal modes */
-.staff { display: block; width: 100%; height: 120px; }
+.staff { display: block; width: 100%; height: 170px; }
 .staff-caption { margin-top: 10px; font-family: var(--mono); font-size: 12.5px; letter-spacing: 0.04em; color: var(--muted); }
 .staff-caption a { margin-left: 4px; white-space: nowrap; }
 
@@ -286,18 +289,10 @@ em, i { font-style: normal; }
 .edu-grid h3 { font-family: var(--mono); font-size: 12.5px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--rose-ink); margin-bottom: 12px; }
 .edu-grid ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; }
 
-/* Research: the wave equation and its modes, then a timeline */
-.wave-fig { margin: 48px 0 0; padding-block: 36px; border-block: 1px solid var(--line); display: grid; grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr); gap: 48px; align-items: center; }
-.wave-math { display: flex; flex-direction: column; gap: 28px; min-width: 0; }
-.eq-label { font-family: var(--mono); font-size: 12.5px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--rose-ink); }
-.eq { overflow-x: auto; overflow-y: hidden; }
-.eq .katex-display { margin: 10px 0 0; text-align: left; }
-.eq .katex-display > .katex { text-align: left; font-size: 1.36em; }
-.eq-small .katex-display { margin-top: 4px; }
-.eq-small .katex-display > .katex { font-size: 1.1em; color: var(--muted); }
-.wave-plot { display: flex; flex-direction: column; gap: 12px; min-width: 0; }
-.wave-plot .staff { height: 220px; }
-.wave-plot figcaption { font-family: var(--mono); font-size: 12.5px; letter-spacing: 0.04em; color: var(--muted); }
+/* Research: a plucked string over its normal modes, then a timeline */
+.wave-fig { margin: 48px 0 0; padding-block: 32px; border-block: 1px solid var(--line); display: flex; flex-direction: column; gap: 14px; }
+.wave-fig .staff { height: 300px; }
+.wave-fig figcaption { font-family: var(--mono); font-size: 12.5px; letter-spacing: 0.04em; color: var(--muted); }
 
 .timeline-section { padding-block: 56px 104px; }
 .timeline { list-style: none; margin: 0; padding: 0 0 0 40px; position: relative; max-width: 880px; }
@@ -327,8 +322,7 @@ em, i { font-style: normal; }
 
 /* Phone and tablet */
 @media (max-width: 900px) {
-  .hero-grid, .page-head-grid, .video-split, .contact-inner, .wave-fig, .performance, .instruments-grid { grid-template-columns: minmax(0, 1fr); gap: 40px; }
-  .wave-fig { gap: 28px; }
+  .hero-grid, .page-head-grid, .video-split, .contact-inner, .performance, .instruments-grid { grid-template-columns: minmax(0, 1fr); gap: 40px; }
   .hero-photo { justify-self: start; max-width: 360px; }
   .page-head-grid .arch { max-width: 340px; }
   .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 32px; }
@@ -351,9 +345,8 @@ em, i { font-style: normal; }
   .gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-auto-rows: 150px; gap: 10px; }
   .gallery .note, .gallery .g-wide-sm { grid-column: span 2; }
   .stat { padding: 0 16px; }
-  .staff { height: 96px; }
-  .wave-plot .staff { height: 190px; }
-  .eq .katex-display > .katex { font-size: 1.2em; }
+  .staff { height: 130px; }
+  .wave-fig .staff { height: 280px; }
   .timeline-section { padding-block: 56px 72px; }
   .timeline { padding-left: 30px; }
   .tl-item::before { left: -30px; }
