@@ -6,7 +6,7 @@ with pages for Home, Research, Experience and Music.
 ## Files
 
 - `index.html`: home page with intro, coursework, highlights, and short Research, Experience and Music sections
-- `research.html`: a plucked string and its first six normal modes, then a timeline of my research
+- `research.html`: a plucked string and its first four normal modes, then a timeline of my research
 - `experience.html`: finance, software and other industry-related roles, plus leadership and activities
 - `music.html`: a recorded performance, embedded from YouTube
 - `style.css`: all styles, with a light theme (default) and a dark theme

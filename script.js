@@ -34,10 +34,10 @@ document.querySelectorAll(".yt-cover").forEach((cover) => {
 // "string": a string of length 1 plucked at x = 0.3 and released from rest. Its motion is
 //   d'Alembert's solution of the wave equation, u(x, t) = ½ [F(x − ct) + F(x + ct)],
 //   where F is the odd, 2-periodic extension of the initial triangle.
-// "modes": the same string above its first six normal modes, sin(nπx) cos(nωt).
+// "modes": the same string above its first four normal modes, sin(nπx) cos(nωt).
 const reduceMotion = matchMedia("(prefers-reduced-motion: reduce)").matches;
 const PLUCK = 0.3;
-const MODES = 6;
+const MODES = 4;
 
 function pluckShape(s) {
   let r = ((s % 2) + 2) % 2;

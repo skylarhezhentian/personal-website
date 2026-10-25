@@ -208,6 +208,7 @@ p, li, figcaption { text-wrap: pretty; }
 .section-head > div { display: flex; flex-direction: column; gap: 12px; }
 .section-head .more { font-weight: 500; text-decoration: none; }
 .section-head .more:hover { text-decoration: underline; }
+.section-sub { color: var(--muted); max-width: 34em; }
 
 /* Selected work */
 .work-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 56px 48px; }
@@ -235,25 +236,13 @@ p, li, figcaption { text-wrap: pretty; }
 .yt-play svg { width: 42%; height: 42%; margin-left: 6%; }
 .yt-cover:hover .yt-play, .yt-cover:focus-visible .yt-play { transform: translate(-50%, -50%) scale(1.06); }
 
-/* Home: experience list and music */
+/* Home: experience and music lists */
 .exp-list { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
 .exp-list a { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 2px 32px; padding: 20px 0; border-bottom: 1px solid var(--line); color: inherit; text-decoration: none; }
 .exp-org { font-family: var(--display); font-size: 28px; font-weight: 500; line-height: 1.15; transition: color 0.15s ease; }
 .exp-role { grid-column: 1; color: var(--muted); font-size: 16.5px; }
 .exp-when { grid-column: 2; grid-row: 1 / span 2; font-family: var(--mono); font-size: 13px; color: var(--muted); font-variant-numeric: tabular-nums; white-space: nowrap; }
 .exp-list a:hover .exp-org { color: var(--rose-ink); }
-
-.music-split { display: grid; grid-template-columns: minmax(0, 0.75fr) minmax(0, 1.25fr); gap: 72px; align-items: center; }
-.music-photo { width: 100%; max-width: 380px; }
-.music-photo img { object-position: 47% 50%; }
-.music-copy { display: flex; flex-direction: column; gap: 16px; min-width: 0; }
-.music-copy > p:not(.eyebrow) { color: var(--muted); max-width: 32em; }
-.music-copy .more { font-weight: 500; text-decoration: none; margin-top: 8px; }
-.music-copy .more:hover { text-decoration: underline; }
-.rec-list { list-style: none; margin: 8px 0 0; padding: 0; border-top: 1px solid var(--line); }
-.rec-list li { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 4px 24px; padding: 14px 0; border-bottom: 1px solid var(--line); }
-.rec-piece { font-family: var(--display); font-size: 22px; line-height: 1.25; }
-.rec-who { font-family: var(--mono); font-size: 12.5px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); white-space: nowrap; }
 
 /* Contact */
 .contact { background: var(--paper-2); padding-block: 104px; }
@@ -299,7 +288,7 @@ p, li, figcaption { text-wrap: pretty; }
 
 /* Research: a plucked string over its normal modes, then a timeline */
 .wave-fig { margin: 48px 0 0; padding-block: 32px; border-block: 1px solid var(--line); display: flex; flex-direction: column; gap: 14px; }
-.wave-fig .staff { height: 300px; }
+.wave-fig .staff { height: 240px; }
 .wave-fig figcaption { font-family: var(--mono); font-size: 12.5px; letter-spacing: 0.04em; color: var(--muted); }
 
 .timeline-section { padding-block: 56px 104px; }
@@ -324,7 +313,7 @@ p, li, figcaption { text-wrap: pretty; }
 
 /* Phone and tablet */
 @media (max-width: 900px) {
-  .hero-grid, .page-head-grid, .music-split, .contact-inner, .performance { grid-template-columns: minmax(0, 1fr); gap: 40px; }
+  .hero-grid, .page-head-grid, .contact-inner, .performance { grid-template-columns: minmax(0, 1fr); gap: 40px; }
   .hero-photo { justify-self: start; max-width: 360px; }
   .page-head-grid .arch { max-width: 340px; }
   .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 32px; }
@@ -348,13 +337,13 @@ p, li, figcaption { text-wrap: pretty; }
   .exp-org { font-size: 24px; }
   .stat { padding: 0 16px; }
   .staff { height: 130px; }
-  .wave-fig .staff { height: 280px; }
+  .wave-fig .staff { height: 220px; }
   .timeline-section { padding-block: 56px 72px; }
   .timeline { padding-left: 30px; }
   .tl-item::before { left: -30px; }
   .tl-item + .tl-item { margin-top: 56px; }
   .tl-sub { font-size: 16.5px; }
-  .hero-photo, .page-head-grid .arch, .music-photo { max-width: 300px; }
+  .hero-photo, .page-head-grid .arch { max-width: 300px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
