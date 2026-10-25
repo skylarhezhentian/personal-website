@@ -55,7 +55,9 @@
 
 *, *::before, *::after { box-sizing: border-box; }
 
-html { scroll-behavior: smooth; scroll-padding-top: 96px; -webkit-text-size-adjust: 100%; }
+html { scroll-padding-top: 96px; -webkit-text-size-adjust: 100%; }
+/* script.js adds .loaded after the page loads, so a link that opens a page at a section lands on it first */
+html.loaded { scroll-behavior: smooth; }
 
 body {
   margin: 0;
@@ -74,15 +76,15 @@ a:hover { text-decoration-color: var(--rose); }
 
 :focus-visible { outline: 2px solid var(--rose-ink); outline-offset: 3px; border-radius: 4px; }
 
-h1, h2, h3 { font-family: var(--display); font-weight: 500; line-height: 1.1; text-wrap: balance; margin: 0; }
-h1, h2, h3, .wordmark, .stat-big, .work-figure strong, .piece { font-variant-numeric: lining-nums; }
+h1, h2, h3, h4 { font-family: var(--display); font-weight: 500; line-height: 1.1; text-wrap: balance; margin: 0; }
+h1, h2, h3, h4, .wordmark, .piece { font-variant-numeric: lining-nums; }
 h2 { font-size: clamp(34px, 4.6vw, 54px); letter-spacing: -0.01em; }
-h3 { font-size: 26px; }
+h3, h4 { font-size: 26px; }
 p { margin: 0; }
 em, i { font-style: normal; }
 /* Keep a lone word off the last line of a paragraph or bullet; balance short labels instead */
 p, li, figcaption { text-wrap: pretty; }
-.tl-sub, .role-title, .piece, .work-figure span, .stat-note { text-wrap: balance; }
+.tl-sub, .role-title, .piece { text-wrap: balance; }
 
 .wrap {
   max-width: var(--maxw);
@@ -158,7 +160,7 @@ p, li, figcaption { text-wrap: pretty; }
   :root:not([data-theme="light"]) .theme-toggle .moon { display: none; }
 }
 
-/* Wave canvases: a plucked string (Home, Music), and on Research the same string over its normal modes */
+/* Wave canvases: a plucked string (hero, Music), and in Research the same string over its normal modes */
 .staff { display: block; width: 100%; height: 170px; }
 .staff-caption { margin-top: 10px; font-family: var(--mono); font-size: 12.5px; letter-spacing: 0.04em; color: var(--muted); }
 .staff-caption a { margin-left: 4px; white-space: nowrap; }
@@ -190,33 +192,12 @@ p, li, figcaption { text-wrap: pretty; }
 .staff-band { margin-top: 48px; }
 .hero .staff-band { margin-bottom: 32px; }
 
-/* Stats */
-.stats { list-style: none; margin: 0; padding: 28px 0 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-top: 1px solid var(--line); }
-.stat { display: flex; flex-direction: column; gap: 4px; padding: 0 24px; border-left: 1px solid var(--line); min-width: 0; }
-.stat:first-child { padding-left: 0; border-left: 0; }
-.stat-big { font-family: var(--display); font-size: clamp(38px, 4.4vw, 54px); font-weight: 500; line-height: 1; letter-spacing: -0.01em; font-variant-numeric: lining-nums; }
-.stat-cap { font-family: var(--mono); font-size: 12.5px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--rose-ink); margin-top: 6px; }
-.stat-note { font-size: 15px; color: var(--muted); line-height: 1.45; }
-
-/* Sections */
+/* Home sections, in the order About, Research, Experience, Honors, Skills, Contact */
 .section { padding-block: 104px; }
 .section-alt { background: var(--paper-2); }
 .section-head { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 12px 32px; margin-bottom: 48px; }
 .section-head > div { display: flex; flex-direction: column; gap: 12px; }
-.section-head .more { font-weight: 500; text-decoration: none; }
-.section-head .more:hover { text-decoration: underline; }
 .section-sub { color: var(--muted); max-width: 34em; }
-
-/* Selected work */
-.work-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 56px 48px; }
-.work { display: flex; flex-direction: column; gap: 12px; padding-top: 24px; border-top: 1px solid var(--line); color: inherit; text-decoration: none; }
-.work h3 { transition: color 0.15s ease; }
-.work:hover h3 { color: var(--rose-ink); }
-.work p { color: var(--muted); }
-.work .work-org { font-family: var(--mono); font-size: 12.5px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
-.work-figure { display: flex; align-items: baseline; gap: 12px; margin-top: 8px; }
-.work-figure strong { font-family: var(--display); font-size: 40px; font-weight: 500; color: var(--rose-ink); line-height: 1; white-space: nowrap; }
-.work-figure span { font-family: var(--mono); font-size: 12.5px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
 
 /* Video frames (Music): a cover photo with a play button until the visitor starts the video */
 .video-frame { margin: 0; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--line); background: #000; }
@@ -232,14 +213,6 @@ p, li, figcaption { text-wrap: pretty; }
 }
 .yt-play svg { width: 42%; height: 42%; margin-left: 6%; }
 .yt-cover:hover .yt-play, .yt-cover:focus-visible .yt-play { transform: translate(-50%, -50%) scale(1.06); }
-
-/* Home: experience and music lists */
-.exp-list { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
-.exp-list a { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 2px 32px; padding: 20px 0; border-bottom: 1px solid var(--line); color: inherit; text-decoration: none; }
-.exp-org { font-family: var(--display); font-size: 28px; font-weight: 500; line-height: 1.15; transition: color 0.15s ease; }
-.exp-role { grid-column: 1; color: var(--muted); font-size: 16.5px; }
-.exp-when { grid-column: 2; grid-row: 1 / span 2; font-family: var(--mono); font-size: 13px; color: var(--muted); font-variant-numeric: tabular-nums; white-space: nowrap; }
-.exp-list a:hover .exp-org { color: var(--rose-ink); }
 
 /* Contact */
 .contact { background: var(--paper-2); padding-block: 104px; }
@@ -268,37 +241,47 @@ p, li, figcaption { text-wrap: pretty; }
 .lede { font-size: 20px; color: var(--muted); max-width: 34em; }
 .page-head .staff-band { margin-top: 40px; }
 
-/* Experience */
-.group { padding-block: 72px; border-top: 1px solid var(--line); }
-.group:first-of-type { border-top: 0; padding-top: 40px; }
-.group-title { font-size: clamp(30px, 3.6vw, 40px); margin-bottom: 40px; }
-.group-title .count { font-family: var(--mono); font-size: 13px; color: var(--muted); letter-spacing: 0.08em; margin-left: 12px; vertical-align: middle; }
-.role { display: grid; grid-template-columns: 220px minmax(0, 1fr); align-items: baseline; gap: 16px 48px; padding-block: 36px; border-top: 1px dashed var(--line); scroll-margin-top: 100px; }
+/* About and Experience: dated entries, with the roles grouped under small labels */
+.group + .group { margin-top: 12px; padding-top: 48px; border-top: 1px solid var(--line); }
+.group-title { font-family: var(--mono); font-size: 12.5px; font-weight: 500; line-height: 1.4; letter-spacing: 0.1em; text-transform: uppercase; color: var(--rose-ink); margin-bottom: 32px; }
+.role { display: grid; grid-template-columns: 220px minmax(0, 1fr); align-items: baseline; gap: 16px 48px; padding-block: 36px; border-top: 1px dashed var(--line); }
 .role:first-of-type { border-top: 0; padding-top: 0; }
 .role-when { font-family: var(--mono); font-size: 13.5px; color: var(--muted); display: flex; flex-direction: column; gap: 2px; font-variant-numeric: tabular-nums; }
 .role-body { display: flex; flex-direction: column; gap: 12px; min-width: 0; }
 .role-title { font-weight: 500; color: var(--muted); margin-top: -4px; }
 .role ul.points { margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px; }
 .role ul.points li::marker { color: var(--rose); }
+.role-note { color: var(--muted); }
 
 /* Research: a plucked string over its normal modes, then a timeline */
-.wave-fig { margin: 48px 0 0; padding-block: 32px; border-block: 1px solid var(--line); display: flex; flex-direction: column; gap: 14px; }
+.wave-fig { margin: 0 0 72px; padding-block: 32px; border-block: 1px solid var(--line); display: flex; flex-direction: column; gap: 14px; }
 .wave-fig .staff { height: 240px; }
 .wave-fig figcaption { font-family: var(--mono); font-size: 12.5px; letter-spacing: 0.04em; color: var(--muted); }
 
-.timeline-section { padding-block: 56px 104px; }
 .timeline { list-style: none; margin: 0; padding: 0 0 0 40px; position: relative; max-width: 880px; }
 .timeline::before { content: ""; position: absolute; left: 4px; top: 12px; bottom: 0; width: 2px; background: var(--line); }
-.tl-item { position: relative; display: flex; flex-direction: column; gap: 10px; scroll-margin-top: 100px; }
+.tl-item { position: relative; display: flex; flex-direction: column; gap: 10px; }
 .tl-item + .tl-item { margin-top: 72px; }
 .tl-item::before { content: ""; position: absolute; left: -40px; top: 6px; width: 12px; height: 12px; border-radius: 50%; background: var(--rose-ink); box-shadow: 0 0 0 4px var(--paper); }
+.section-alt .tl-item::before { box-shadow: 0 0 0 4px var(--paper-2); }
 .tl-date { font-family: var(--mono); font-size: 13.5px; letter-spacing: 0.04em; color: var(--rose-ink); font-variant-numeric: tabular-nums; }
 .tl-title { font-size: clamp(26px, 3vw, 34px); }
 .tl-sub { color: var(--muted); }
 .tl-item ul { margin: 6px 0 0; padding-left: 20px; list-style: disc; display: flex; flex-direction: column; gap: 10px; }
 .tl-item li::marker { color: var(--rose); }
-.tl-link a { font-weight: 500; text-decoration: none; }
-.tl-link a:hover { text-decoration: underline; }
+.tl-link a, .skills-note a { font-weight: 500; text-decoration: none; }
+.tl-link a:hover, .skills-note a:hover { text-decoration: underline; }
+
+/* Honors: the name on the left, the award and its detail on the right */
+.honors { list-style: none; margin: 0; padding: 0; border-bottom: 1px solid var(--line); }
+.honors li { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: baseline; gap: 6px 48px; padding-block: 28px; border-top: 1px solid var(--line); }
+.honors p { color: var(--muted); }
+
+/* Skills: one flat list of tags, then a note that links to Music */
+.chips { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 10px; }
+.chips li { font-family: var(--mono); font-size: 13px; letter-spacing: 0.02em; line-height: 1.4; padding: 7px 14px; border-radius: 999px; background: var(--paper-2); border: 1px solid var(--line); }
+.skills-note { margin-top: 32px; color: var(--muted); }
+.skills-note a { display: inline-block; }
 
 /* Music */
 .performances { display: flex; flex-direction: column; gap: 72px; }
@@ -313,29 +296,26 @@ p, li, figcaption { text-wrap: pretty; }
   .hero-grid, .page-head-grid, .contact-inner, .performance { grid-template-columns: minmax(0, 1fr); gap: 40px; }
   .hero-photo { justify-self: start; max-width: 360px; }
   .page-head-grid .arch { max-width: 340px; }
-  .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 32px; }
-  .stat:nth-child(3) { padding-left: 0; border-left: 0; }
   .role { grid-template-columns: minmax(0, 1fr); gap: 8px; }
   .role-when { flex-direction: row; flex-wrap: wrap; gap: 4px 16px; padding-top: 0; }
 }
 
 @media (max-width: 720px) {
+  html { scroll-padding-top: 124px; }
   body { font-size: 17px; }
   .header-inner { flex-wrap: wrap; gap: 0 16px; min-height: 0; padding-block: 12px 0; }
   .header-actions { margin-left: auto; }
   .site-nav { order: 3; width: 100%; margin-left: 0; gap: 22px; padding-block: 10px 8px; overflow-x: auto; }
   .site-nav a { font-size: 15px; white-space: nowrap; }
   .hero { padding-top: 40px; }
+  .kicker-dot { display: none; }
+  .kicker-loc { display: block; }
   .intro, .lede { font-size: 18px; }
   .section, .contact { padding-block: 72px; }
-  .work-grid { grid-template-columns: minmax(0, 1fr); gap: 40px; }
-  .exp-list a { grid-template-columns: minmax(0, 1fr); }
-  .exp-when { grid-column: 1; grid-row: auto; margin-top: 4px; }
-  .exp-org { font-size: 24px; }
-  .stat { padding: 0 16px; }
   .staff { height: 130px; }
+  .wave-fig { margin-bottom: 56px; }
   .wave-fig .staff { height: 220px; }
-  .timeline-section { padding-block: 56px 72px; }
+  .honors li { grid-template-columns: minmax(0, 1fr); padding-block: 22px; }
   .timeline { padding-left: 30px; }
   .tl-item::before { left: -30px; }
   .tl-item + .tl-item { margin-top: 56px; }
@@ -343,7 +323,13 @@ p, li, figcaption { text-wrap: pretty; }
   .hero-photo, .page-head-grid .arch { max-width: 300px; }
 }
 
+/* Small phones: fit all five nav links on one row */
+@media (max-width: 380px) {
+  .site-nav { gap: 16px; }
+  .site-nav a { font-size: 14.5px; }
+}
+
 @media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; }
-  .btn, .work h3, .exp-org, .yt-play { transition: none; }
+  html.loaded { scroll-behavior: auto; }
+  .btn, .yt-play { transition: none; }
 }

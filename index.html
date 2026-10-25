@@ -6,7 +6,7 @@
   <title>Skylar Tian</title>
   <meta name="description" content="Skylar Tian studies Mathematics and Computer Science at Columbia and is looking for quantitative research and trading roles.">
   <meta property="og:title" content="Skylar Tian">
-  <meta property="og:description" content="Mathematics & Computer Science at Columbia. Quantitative research, statistical modeling, and music.">
+  <meta property="og:description" content="Mathematics & Computer Science at Columbia. Research, experience and honors.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://skylarhezhentian.github.io/personal-website/assets/img/headshot.jpg">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
@@ -23,9 +23,10 @@
     <div class="wrap header-inner">
       <a class="wordmark" href="index.html">Skylar <em>Tian</em></a>
       <nav class="site-nav" aria-label="Main">
-        <a href="index.html" aria-current="page">Home</a>
-        <a href="research.html">Research</a>
-        <a href="experience.html">Experience</a>
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#experience">Experience</a>
+        <a href="#honors">Honors</a>
         <a href="music.html">Music</a>
       </nav>
       <div class="header-actions">
@@ -45,14 +46,14 @@
           <div class="hero-text">
             <p class="hello">hi, I'm <i class="heart" aria-hidden="true"></i></p>
             <h1 class="name">Skylar <em>Tian</em></h1>
-            <p class="kicker">Mathematics &amp; Computer Science · Columbia University</p>
+            <p class="kicker">Mathematics &amp; Computer Science <span class="kicker-dot" aria-hidden="true">·</span> <span class="kicker-loc">New&nbsp;York,&nbsp;NY</span></p>
             <p class="intro">
-              I'm interested in machine learning, computational neuroscience, analysis and topology.
+              I'm a student at Columbia interested in machine learning, computational neuroscience, analysis and topology.
               My coursework includes <mark class="hl">probability theory, statistical inference and linear algebra</mark>.
             </p>
             <div class="actions">
               <a class="btn btn-rose" href="assets/Skylar-Tian-Resume.pdf">Resume</a>
-              <a class="btn btn-ghost" href="research.html">Full research timeline</a>
+              <a class="btn btn-ghost" href="#research">Full research timeline</a>
             </div>
           </div>
           <figure class="arch hero-photo">
@@ -62,108 +63,256 @@
 
         <div class="staff-band">
           <canvas class="staff" data-mode="string" data-animate aria-hidden="true"></canvas>
-          <p class="staff-caption">A plucked string, moving as the wave equation predicts. <a href="research.html">See its normal modes &rarr;</a></p>
-        </div>
-
-        <ul class="stats">
-          <li class="stat">
-            <span class="stat-big">3.94</span>
-            <span class="stat-cap">GPA</span>
-            <span class="stat-note">Dean's List every semester</span>
-          </li>
-          <li class="stat">
-            <span class="stat-big">USAMO</span>
-            <span class="stat-cap">Participant</span>
-            <span class="stat-note">USA Mathematical Olympiad</span>
-          </li>
-          <li class="stat">
-            <span class="stat-big">11/15</span>
-            <span class="stat-cap">AIME</span>
-            <span class="stat-note">Also a USAPhO qualifier</span>
-          </li>
-          <li class="stat">
-            <span class="stat-big">Laidlaw</span>
-            <span class="stat-cap">Scholar</span>
-            <span class="stat-note">1 of 25 at Columbia College</span>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="wrap">
-        <header class="section-head">
-          <div>
-            <p class="eyebrow">Research</p>
-            <h2>What I'm studying</h2>
-          </div>
-          <a class="more" href="research.html">Full timeline &rarr;</a>
-        </header>
-
-        <div class="work-grid">
-          <a class="work" href="research.html#neural">
-            <p class="work-org">Zuckerman Institute · Paninski Lab</p>
-            <h3>Neural dynamics and behavior</h3>
-            <p>Compressed local field potential recordings, then modeled shared and region-specific brain states with HMMs and switching linear dynamical systems.</p>
-            <p class="work-figure"><strong>95%</strong><span>fewer spatial dimensions</span></p>
-          </a>
-          <a class="work" href="research.html#routing">
-            <p class="work-org">Laidlaw Foundation · New York</p>
-            <h3>Equitable food routing</h3>
-            <p>A vehicle-routing model over 528 NYC food pantries and community kitchens, comparing five allocation policies weighted by food insecurity.</p>
-            <p class="work-figure"><strong>57.7%</strong><span>high-need coverage, up from 26.3%</span></p>
-          </a>
-          <a class="work" href="research.html#reading">
-            <p class="work-org">Columbia Mathematics · Directed Reading</p>
-            <h3>Algebraic topology</h3>
-            <p>A semester of mentored, proof-based reading on homotopy, fundamental groups and introductory homology, ending in a talk at the closing colloquium.</p>
-            <p class="work-figure"><strong>1 of 10</strong><span>undergraduates selected</span></p>
-          </a>
-          <a class="work" href="research.html#sumac">
-            <p class="work-org">Stanford Mathematics Camp · SUMaC</p>
-            <h3>Abstract algebra</h3>
-            <p>Proof-driven work on the homomorphism theorems and introductory Galois theory, with a final project on the algebra behind elliptic curve cryptography.</p>
-            <p class="work-figure"><strong>1 of 64</strong><span>students selected</span></p>
-          </a>
+          <p class="staff-caption">A plucked string, moving as the wave equation predicts. <a href="#modes">See its normal modes &rarr;</a></p>
         </div>
       </div>
     </section>
 
-    <section class="section section-alt">
+    <section class="section" id="about" aria-labelledby="about-title">
       <div class="wrap">
         <header class="section-head">
           <div>
-            <p class="eyebrow">Experience</p>
-            <h2>Where I've worked</h2>
+            <h2 id="about-title">About</h2>
+            <p class="section-sub">My research spans neuroscience, optimization and pure math, and before college I competed in math and physics olympiads.</p>
           </div>
-          <a class="more" href="experience.html">Full experience &rarr;</a>
         </header>
 
-        <ul class="exp-list">
-          <li><a href="experience.html#xpulse"><span class="exp-org">XPulse</span><span class="exp-role">Software Developer</span><span class="exp-when">May 2026 – Present</span></a></li>
-          <li><a href="experience.html#worldwide"><span class="exp-org">Worldwide Capital Corporation</span><span class="exp-role">Investment Banking Spring Analyst</span><span class="exp-when">Mar – Apr 2026</span></a></li>
-          <li><a href="experience.html#efund"><span class="exp-org">E Fund Management</span><span class="exp-role">Quantitative Research Winter Analyst</span><span class="exp-when">Dec 2025 – Feb 2026</span></a></li>
-          <li><a href="experience.html#musewav"><span class="exp-org">MuseWav Group</span><span class="exp-role">Co-founder, Software Developer</span><span class="exp-when">Dec 2025 – Present</span></a></li>
-          <li><a href="experience.html#alpha"><span class="exp-org">Columbia Alpha Partners</span><span class="exp-role">Executive Board, Treasurer</span><span class="exp-when">Sep 2025 – Present</span></a></li>
-          <li><a href="experience.html#jane-street"><span class="exp-org">Jane Street</span><span class="exp-role">Participant, WiSE Program</span><span class="exp-when">Jun – Jul 2025</span></a></li>
+        <article class="role">
+          <div class="role-when"><span>Class of 2028</span><span>New York, NY</span></div>
+          <div class="role-body">
+            <h3>Columbia College, Columbia University</h3>
+            <p class="role-title">B.A. in Mathematics &amp; Computer Science</p>
+            <p class="role-note">GPA 3.94/4.00 · Dean's List, all semesters</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="research" aria-labelledby="research-title">
+      <div class="wrap">
+        <header class="section-head">
+          <div>
+            <h2 id="research-title">Research</h2>
+          </div>
+        </header>
+
+        <figure class="wave-fig" id="modes">
+          <canvas class="staff" data-mode="modes" data-labels data-animate aria-hidden="true"></canvas>
+          <figcaption>A string plucked at 0.3L. The top line is its motion, u(x, t), and the four lines below are its first four normal modes.</figcaption>
+        </figure>
+
+        <ol class="timeline">
+          <li class="tl-item" id="neural">
+            <p class="tl-date">Jun 2026 – Present</p>
+            <h3 class="tl-title">Neural Dynamics and Behavior Prediction</h3>
+            <p class="tl-sub">Undergraduate Researcher, Columbia Zuckerman Institute, advised by Liam Paninski</p>
+            <ul>
+              <li>Selected as 1 of 10 students for a competitive computational neuroscience research program.</li>
+              <li>Benchmarked lfpack and autoencoder representations of local field potentials against raw recordings, keeping neural dynamics at high temporal resolution while cutting spatial dimension by 95%.</li>
+              <li>Modeled simultaneous recordings across brain regions with shared and region-specific latent components, including hidden Markov models and switching linear dynamical systems.</li>
+              <li>Now comparing continuous, discrete and hierarchical brain-state models to test whether global states modulate regional inputs, local computations, or both, toward a dynamic brain atlas.</li>
+            </ul>
+          </li>
+
+          <li class="tl-item" id="routing">
+            <p class="tl-date">May – Aug 2026</p>
+            <h3 class="tl-title">Equitable Food Routing in New York City</h3>
+            <p class="tl-sub">Student Researcher in Applied Mathematics, Laidlaw Foundation</p>
+            <ul>
+              <li>Built a Python and Google OR-Tools vehicle-routing model for 528 NYC food pantries and community kitchens, with OSRM travel times, vehicle capacities and service windows, comparing five allocation policies that weigh food insecurity.</li>
+              <li>Need-prioritized routing raised median coverage of high-need demand from 26.3% to 57.7% with only a marginal loss of total reach, across five solves per policy and skip-penalty sensitivity tests.</li>
+            </ul>
+            <p class="tl-link"><a href="https://laidlawscholars.network/posts/allocation-under-scarce-capacity-equity-aware-routing-for-urban-food-rescue-in-new-york-city">Read the project post on the Laidlaw Scholars Network &rarr;</a></p>
+          </li>
+
+          <li class="tl-item" id="reading">
+            <p class="tl-date">Jan 2026 – Present</p>
+            <h3 class="tl-title">Directed Reading in Algebraic Topology</h3>
+            <p class="tl-sub">Researcher, <a href="https://www.math.columbia.edu/programs-math/undergraduate-program/undergraduate-research/drp/">Directed Reading Program</a>, Columbia Department of Mathematics, mentored by Azelie Picot</p>
+            <ul>
+              <li>One of 10 undergraduates selected for a semester of mentored study with a PhD researcher.</li>
+              <li>Conducted independent, proof-based reading in algebraic topology on homotopy, fundamental groups and introductory homology, and presented the work formally at the program's closing colloquium.</li>
+            </ul>
+          </li>
+
+          <li class="tl-item" id="sumac">
+            <p class="tl-date">Jun – Aug 2024</p>
+            <h3 class="tl-title">Abstract Algebra and Elliptic Curve Cryptography</h3>
+            <p class="tl-sub">Student Researcher, Abstract Algebra Track, Stanford University Mathematics Camp (SUMaC)</p>
+            <ul>
+              <li>One of only 64 students selected for SUMaC Program I, an intensive math camp focused on abstract algebra and number theory.</li>
+              <li>Collaborated with peers and graduate TAs on proof-driven problem sets, explored the homomorphism theorems and introductory Galois theory, and presented a final project applying algebraic reasoning to elliptic curve cryptography.</li>
+            </ul>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section" id="experience" aria-labelledby="experience-title">
+      <div class="wrap">
+        <header class="section-head">
+          <div>
+            <h2 id="experience-title">Experience</h2>
+            <p class="section-sub">Finance, software and other industry-related experiences.</p>
+          </div>
+        </header>
+
+        <div class="group">
+          <h3 class="group-title">Finance</h3>
+
+          <article class="role" id="worldwide">
+            <div class="role-when"><span>Mar 2026 – Apr 2026</span><span>New York, NY</span></div>
+            <div class="role-body">
+              <h4>Worldwide Capital Corporation</h4>
+              <p class="role-title">Investment Banking Spring Analyst</p>
+              <ul class="points">
+                <li>Sourced acquisition and financing opportunities in petroleum terminals and midstream infrastructure, screening U.S. terminal operators by location, capacity, product mix, ownership and transportation.</li>
+                <li>Evaluated prospective deals through company- and asset-level research, drawing on public filings, industry data, transaction materials and comparable assets to judge deal rationale and client fit.</li>
+                <li>Supported deal origination by building target and investor pipelines, identifying owners, operators and counterparties, drafting tailored outreach and joining client calls.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="role" id="efund">
+            <div class="role-when"><span>Dec 2025 – Feb 2026</span><span>Hong Kong</span></div>
+            <div class="role-body">
+              <h4>E Fund Management</h4>
+              <p class="role-title">Quantitative Research Winter Analyst</p>
+              <ul class="points">
+                <li>Replicated the Carhart four-factor and Fama–French five-factor models on Chinese A-shares, adapting factor construction, portfolio formation and regressions to the market's structure and regulation.</li>
+                <li>Built a reproducible Python pipeline for a deviation salience strategy on 2021–2025 Chinese equities, using industry-relative signals and double-sorted portfolios to test next-month momentum and reversal.</li>
+                <li>Evaluated seven portfolio specifications with Fama–MacBeth regressions controlling for size, momentum and volatility, using Newey–West inference and missing-return sensitivity tests.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="role" id="jane-street">
+            <div class="role-when"><span>Jun 2025 – Jul 2025</span><span>New York, NY</span></div>
+            <div class="role-body">
+              <h4>Jane Street</h4>
+              <p class="role-title">Participant, WiSE Program</p>
+              <ul class="points">
+                <li>Selected as 1 of 100 students for an intensive program on trading, market-making and decision theory.</li>
+                <li>Built and analyzed cross-sector trading models in simulated markets using probability, expected value and capital allocation.</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+
+        <div class="group">
+          <h3 class="group-title">Software and startups</h3>
+
+          <article class="role" id="xpulse">
+            <div class="role-when"><span>May 2026 – Present</span><span>New York, NY</span></div>
+            <div class="role-body">
+              <h4>XPulse</h4>
+              <p class="role-title">Software Developer</p>
+              <ul class="points">
+                <li>Engineered a weekly publishing pipeline on FastAPI, Supabase PostgreSQL and Railway workers, with scheduling and concurrency controls that keep background tasks and episodes reliable.</li>
+                <li>Upgraded content selection and OpenAI speech generation to newer audio models, and added Mutagen duration checks that hold episodes to 15–20 minutes.</li>
+                <li>Automated cover-art generation with reference-conditioned Gemini prompts, checking image integrity, anatomy, framing and provenance before a final review gates publication.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="role" id="musewav">
+            <div class="role-when"><span>Dec 2025 – Present</span><span>New York, NY</span></div>
+            <div class="role-body">
+              <h4>MuseWav Group</h4>
+              <p class="role-title">Co-founder, Software Developer</p>
+              <ul class="points">
+                <li>Co-founded an AI and music startup and designed its online platform to raise creator earnings, modeling pricing, fee structures and expected lifetime value for independent producers.</li>
+                <li>Developed blockchain-based tokenization for music assets and early AI-generated music features built on pattern extraction and audio-signal embeddings.</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+
+        <div class="group">
+          <h3 class="group-title">Leadership and activities</h3>
+
+          <article class="role" id="sailing">
+            <div class="role-when"><span>Sep 2026 – Present</span><span>New York, NY</span></div>
+            <div class="role-body">
+              <h4>Columbia University Sailing</h4>
+              <p class="role-title">Race Team, Skipper</p>
+              <ul class="points">
+                <li>Raced for Columbia's student sailing club in intercollegiate regattas, at the helm or on crew as needed.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="role" id="alpha">
+            <div class="role-when"><span>Sep 2025 – Present</span><span>New York, NY</span></div>
+            <div class="role-body">
+              <h4>Columbia Alpha Partners</h4>
+              <p class="role-title">Executive Board, Treasurer</p>
+              <ul class="points">
+                <li>Led an investment pod's copper research, translating geopolitical supply disruptions and demand from AI data centers, electric vehicles and grid infrastructure into a structural pricing model estimated with 500 Monte Carlo simulations.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="role" id="math-society">
+            <div class="role-when"><span>Sep 2025 – Present</span><span>New York, NY</span></div>
+            <div class="role-body">
+              <h4>Undergraduate Math Society</h4>
+              <p class="role-title">Executive Board Member</p>
+              <ul class="points">
+                <li>Organized math talks with faculty and graduate students to build the undergraduate math community.</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="honors" aria-labelledby="honors-title">
+      <div class="wrap">
+        <header class="section-head">
+          <div>
+            <h2 id="honors-title">Honors</h2>
+          </div>
+        </header>
+
+        <ul class="honors">
+          <li>
+            <h3>USA Mathematical Olympiad (USAMO)</h3>
+            <p>Participant · AMC top 1%, AIME 11/15</p>
+          </li>
+          <li>
+            <h3>USA Physics Olympiad (USAPhO)</h3>
+            <p>Qualifier · Top 400 on the F=ma exam</p>
+          </li>
+          <li>
+            <h3>Laidlaw Scholar</h3>
+            <p>Applied Mathematics · 1 of 25 students at Columbia College</p>
+          </li>
         </ul>
       </div>
     </section>
 
-    <section class="section">
+    <section class="section" id="skills" aria-labelledby="skills-title">
       <div class="wrap">
         <header class="section-head">
           <div>
-            <p class="eyebrow">Music</p>
-            <h2>Music experience</h2>
-            <p class="section-sub">I sing opera and play harp, flute, guitar and piano.</p>
+            <h2 id="skills-title">Skills</h2>
           </div>
-          <a class="more" href="music.html">Watch the performance &rarr;</a>
         </header>
 
-        <ul class="exp-list">
-          <li><a href="music.html"><span class="exp-org">Als Luise die Briefe ihres ungetreuen Liebhabers verbrannte</span><span class="exp-role">Wolfgang Amadeus Mozart</span><span class="exp-when">Voice with piano</span></a></li>
+        <ul class="chips">
+          <li>Python</li>
+          <li>pandas</li>
+          <li>NumPy</li>
+          <li>Matplotlib</li>
+          <li>SQL</li>
+          <li>Java</li>
+          <li>MATLAB</li>
+          <li>Excel</li>
+          <li>PowerPoint</li>
+          <li>Word</li>
         </ul>
+        <p class="skills-note">Outside class, I'm a classical singer and instrumentalist. <a href="music.html">Watch a performance &rarr;</a></p>
       </div>
     </section>
 
@@ -186,8 +335,7 @@
     <div class="wrap footer-inner">
       <p>© <span data-year>2026</span> Skylar Tian · New York, NY <i class="heart" aria-hidden="true"></i></p>
       <nav aria-label="Footer">
-        <a href="research.html">Research</a>
-        <a href="experience.html">Experience</a>
+        <a href="assets/Skylar-Tian-Resume.pdf">Resume</a>
         <a href="music.html">Music</a>
         <a href="mailto:h.tian@columbia.edu">Email</a>
       </nav>

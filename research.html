@@ -4,121 +4,19 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Research · Skylar Tian</title>
-  <meta name="description" content="A timeline of Skylar Tian's research: neural dynamics, equitable food routing, algebraic topology and abstract algebra.">
-  <meta property="og:title" content="Research · Skylar Tian">
-  <meta property="og:image" content="https://skylarhezhentian.github.io/personal-website/assets/img/studying.jpg">
+  <meta name="robots" content="noindex">
+  <link rel="canonical" href="https://skylarhezhentian.github.io/personal-website/">
+  <!-- Research is now a section of the home page. Old links keep working, and a link to one entry (such as #routing) lands on that entry. -->
+  <script>location.replace("index.html" + (location.hash || "#research"));</script>
+  <noscript><meta http-equiv="refresh" content="0; url=index.html#research"></noscript>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400..700&family=Caveat:wght@500;600&family=DM+Mono:wght@400;500&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <script>try{var t=localStorage.getItem("theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
 </head>
 <body>
-  <a class="skip" href="#main">Skip to content</a>
-
-  <header class="site-header">
-    <div class="wrap header-inner">
-      <a class="wordmark" href="index.html">Skylar <em>Tian</em></a>
-      <nav class="site-nav" aria-label="Main">
-        <a href="index.html">Home</a>
-        <a href="research.html" aria-current="page">Research</a>
-        <a href="experience.html">Experience</a>
-        <a href="music.html">Music</a>
-      </nav>
-      <div class="header-actions">
-        <a class="btn btn-rose btn-small" href="index.html#contact">Contact</a>
-        <button class="theme-toggle" type="button" aria-label="Switch between light and dark theme">
-          <svg class="moon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.39 5.39 0 0 1-4.4 2.26 5.4 5.4 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg>
-          <svg class="sun" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="4.5" fill="currentColor"/><path stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg>
-        </button>
-      </div>
+  <main class="section">
+    <div class="wrap">
+      <p>Research is now part of the home page. <a href="index.html#research">Go to Research</a></p>
     </div>
-  </header>
-
-  <main id="main">
-    <section class="page-head">
-      <div class="wrap">
-        <div class="page-head-grid">
-          <div class="title-block">
-            <p class="hello">math, applied <i class="heart" aria-hidden="true"></i></p>
-            <h1 class="page-title">Research</h1>
-            <p class="lede">Neuroscience, optimization and pure math.</p>
-          </div>
-          <figure class="arch squat">
-            <img src="assets/img/studying.jpg" width="1011" height="1100" alt="Skylar writing in a notebook at an outdoor table on a sunny day">
-          </figure>
-        </div>
-
-        <figure class="wave-fig">
-          <canvas class="staff" data-mode="modes" data-labels data-animate aria-hidden="true"></canvas>
-          <figcaption>A string plucked at 0.3L. The top line is its motion, u(x, t), and the four lines below are its first four normal modes.</figcaption>
-        </figure>
-      </div>
-    </section>
-
-    <section class="timeline-section">
-      <div class="wrap">
-        <ol class="timeline">
-          <li class="tl-item" id="neural">
-            <p class="tl-date">Jun 2026 – Present</p>
-            <h2 class="tl-title">Neural Dynamics and Behavior Prediction</h2>
-            <p class="tl-sub">Undergraduate Researcher, Columbia Zuckerman Institute, advised by Liam Paninski</p>
-            <ul>
-              <li>Selected as 1 of 10 students for a competitive computational neuroscience research program.</li>
-              <li>Benchmarked lfpack and autoencoder representations of local field potentials against raw recordings, keeping neural dynamics at high temporal resolution while cutting spatial dimension by 95%.</li>
-              <li>Modeled simultaneous recordings across brain regions with shared and region-specific latent components, including hidden Markov models and switching linear dynamical systems.</li>
-              <li>Now comparing continuous, discrete and hierarchical brain-state models to test whether global states modulate regional inputs, local computations, or both, toward a dynamic brain atlas.</li>
-            </ul>
-          </li>
-
-          <li class="tl-item" id="routing">
-            <p class="tl-date">May – Aug 2026</p>
-            <h2 class="tl-title">Equitable Food Routing in New York City</h2>
-            <p class="tl-sub">Student Researcher in Applied Mathematics, Laidlaw Foundation</p>
-            <ul>
-              <li>Built a Python and Google OR-Tools vehicle-routing model for 528 NYC food pantries and community kitchens, with OSRM travel times, vehicle capacities and service windows, comparing five allocation policies that weigh food insecurity.</li>
-              <li>Need-prioritized routing raised median coverage of high-need demand from 26.3% to 57.7% with only a marginal loss of total reach, across five solves per policy and skip-penalty sensitivity tests.</li>
-            </ul>
-            <p class="tl-link"><a href="https://laidlawscholars.network/posts/allocation-under-scarce-capacity-equity-aware-routing-for-urban-food-rescue-in-new-york-city">Read the project post on the Laidlaw Scholars Network &rarr;</a></p>
-          </li>
-
-          <li class="tl-item" id="reading">
-            <p class="tl-date">Jan 2026 – Present</p>
-            <h2 class="tl-title">Directed Reading in Algebraic Topology</h2>
-            <p class="tl-sub">Researcher, <a href="https://www.math.columbia.edu/programs-math/undergraduate-program/undergraduate-research/drp/">Directed Reading Program</a>, Columbia Department of Mathematics, mentored by Azelie Picot</p>
-            <ul>
-              <li>One of 10 undergraduates selected for a semester of mentored study with a PhD researcher.</li>
-              <li>Conducted independent, proof-based reading in algebraic topology on homotopy, fundamental groups and introductory homology, and presented the work formally at the program's closing colloquium.</li>
-            </ul>
-          </li>
-
-          <li class="tl-item" id="sumac">
-            <p class="tl-date">Jun – Aug 2024</p>
-            <h2 class="tl-title">Abstract Algebra and Elliptic Curve Cryptography</h2>
-            <p class="tl-sub">Student Researcher, Abstract Algebra Track, Stanford University Mathematics Camp (SUMaC)</p>
-            <ul>
-              <li>One of only 64 students selected for SUMaC Program I, an intensive math camp focused on abstract algebra and number theory.</li>
-              <li>Collaborated with peers and graduate TAs on proof-driven problem sets, explored the homomorphism theorems and introductory Galois theory, and presented a final project applying algebraic reasoning to elliptic curve cryptography.</li>
-            </ul>
-          </li>
-        </ol>
-      </div>
-    </section>
   </main>
-
-  <footer class="site-footer">
-    <div class="wrap footer-inner">
-      <p>© <span data-year>2026</span> Skylar Tian · New York, NY <i class="heart" aria-hidden="true"></i></p>
-      <nav aria-label="Footer">
-        <a href="index.html">Home</a>
-        <a href="experience.html">Experience</a>
-        <a href="music.html">Music</a>
-        <a href="mailto:h.tian@columbia.edu">Email</a>
-      </nav>
-    </div>
-  </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>

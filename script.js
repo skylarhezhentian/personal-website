@@ -13,6 +13,10 @@ document.querySelectorAll(".theme-toggle").forEach((btn) => {
 
 document.querySelectorAll("[data-year]").forEach((el) => { el.textContent = new Date().getFullYear(); });
 
+// In-page links glide only after the page has loaded. A smooth scroll that starts while fonts are still
+// swapping in stops short, so a link like index.html#honors would miss its section.
+addEventListener("load", () => root.classList.add("loaded"));
+
 // A YouTube recording starts as a cover photo. Clicking it swaps in the player and starts the video;
 // without JavaScript (or with a modifier key) the cover is a plain link to the video on YouTube.
 document.querySelectorAll(".yt-cover").forEach((cover) => {
