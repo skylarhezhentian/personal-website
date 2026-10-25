@@ -12,7 +12,7 @@ with pages for Home, Experience, Research and Music.
 - `style.css`: all styles, with a light theme (default) and a dark theme
 - `script.js`: theme toggle and the five-line "harmonics" staff drawn on each page
 - `assets/img/`: photos and artwork, resized for the web
-- `assets/video/`: performance and intro videos, compressed to 720p
+- `assets/video/`: intro and performance videos, compressed to 720p (one performance is embedded from YouTube)
 
 ## Preview locally
 
