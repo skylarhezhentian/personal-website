@@ -302,6 +302,8 @@ p, li, figcaption { text-wrap: pretty; }
 .tl-sub { color: var(--muted); }
 .tl-item ul { margin: 6px 0 0; padding-left: 20px; list-style: disc; display: flex; flex-direction: column; gap: 10px; }
 .tl-item li::marker { color: var(--rose); }
+.tl-link a { font-weight: 500; text-decoration: none; }
+.tl-link a:hover { text-decoration: underline; }
 
 /* Music */
 .performances { display: flex; flex-direction: column; gap: 72px; }
