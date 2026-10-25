@@ -7,12 +7,11 @@ with pages for Home, Research, Experience and Music.
 
 - `index.html`: home page with intro, coursework, highlights, and short Research, Experience and Music sections
 - `research.html`: a plucked string and its first six normal modes, then a timeline of my research
-- `experience.html`: finance, software and leadership roles, plus education and skills
-- `music.html`: recorded performances and instruments
+- `experience.html`: finance, software and other industry-related roles, plus leadership and activities
+- `music.html`: a recorded performance, embedded from YouTube
 - `style.css`: all styles, with a light theme (default) and a dark theme
 - `script.js`: theme toggle and the plucked-string animation (a solution of the wave equation)
 - `assets/img/`: photos and artwork, resized for the web
-- `assets/video/`: performance videos, compressed to 720p (one performance is embedded from YouTube)
 
 ## Preview locally
 

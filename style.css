@@ -75,14 +75,14 @@ a:hover { text-decoration-color: var(--rose); }
 :focus-visible { outline: 2px solid var(--rose-ink); outline-offset: 3px; border-radius: 4px; }
 
 h1, h2, h3 { font-family: var(--display); font-weight: 500; line-height: 1.1; text-wrap: balance; margin: 0; }
-h1, h2, h3, .wordmark, .stat-big, .work-figure strong, .piece, .staff-list .inst { font-variant-numeric: lining-nums; }
+h1, h2, h3, .wordmark, .stat-big, .work-figure strong, .piece { font-variant-numeric: lining-nums; }
 h2 { font-size: clamp(34px, 4.6vw, 54px); letter-spacing: -0.01em; }
 h3 { font-size: 26px; }
 p { margin: 0; }
 em, i { font-style: normal; }
 /* Keep a lone word off the last line of a paragraph or bullet; balance short labels instead */
 p, li, figcaption { text-wrap: pretty; }
-.edu-grid li, .tl-sub, .role-title, .piece, .work-figure span, .stat-note { text-wrap: balance; }
+.tl-sub, .role-title, .piece, .work-figure span, .stat-note { text-wrap: balance; }
 
 .wrap {
   max-width: var(--maxw);
@@ -222,7 +222,7 @@ p, li, figcaption { text-wrap: pretty; }
 
 /* Video frames (Music) */
 .video-frame { margin: 0; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--line); background: #000; }
-.video-frame video, .video-frame iframe { display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; border: 0; }
+.video-frame iframe { display: block; width: 100%; aspect-ratio: 16 / 9; border: 0; }
 
 /* Home: experience list and music */
 .exp-list { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
@@ -286,10 +286,6 @@ p, li, figcaption { text-wrap: pretty; }
 .chips { list-style: none; padding: 0; margin: 4px 0 0; display: flex; flex-wrap: wrap; gap: 8px; }
 .chips li { font-family: var(--mono); font-size: 12.5px; padding: 4px 12px; border-radius: 999px; background: var(--paper-2); border: 1px solid var(--line); color: var(--ink); }
 
-.edu-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; margin-top: 36px; }
-.edu-grid h3 { font-family: var(--mono); font-size: 12.5px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--rose-ink); margin-bottom: 12px; }
-.edu-grid ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; }
-
 /* Research: a plucked string over its normal modes, then a timeline */
 .wave-fig { margin: 48px 0 0; padding-block: 32px; border-block: 1px solid var(--line); display: flex; flex-direction: column; gap: 14px; }
 .wave-fig .staff { height: 300px; }
@@ -314,21 +310,14 @@ p, li, figcaption { text-wrap: pretty; }
 .piece { font-family: var(--display); font-size: clamp(28px, 3.2vw, 38px); line-height: 1.15; }
 .composer { font-size: 19px; }
 .detail { font-family: var(--mono); font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); font-variant-numeric: tabular-nums; }
-.instruments-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 56px; align-items: center; }
-.instruments-grid figure { margin: 0; border-radius: 20px; overflow: hidden; }
-.staff-list { list-style: none; padding: 0; margin: 24px 0 0; }
-.staff-list li { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; padding: 12px 0 6px; border-bottom: 1.5px solid var(--rose); }
-.staff-list .inst { font-family: var(--display); font-size: 30px; line-height: 1.1; }
-.staff-list .role-note { font-family: var(--mono); font-size: 12.5px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); text-align: right; }
 
 /* Phone and tablet */
 @media (max-width: 900px) {
-  .hero-grid, .page-head-grid, .music-split, .contact-inner, .performance, .instruments-grid { grid-template-columns: minmax(0, 1fr); gap: 40px; }
+  .hero-grid, .page-head-grid, .music-split, .contact-inner, .performance { grid-template-columns: minmax(0, 1fr); gap: 40px; }
   .hero-photo { justify-self: start; max-width: 360px; }
   .page-head-grid .arch { max-width: 340px; }
   .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 32px; }
   .stat:nth-child(3) { padding-left: 0; border-left: 0; }
-  .edu-grid { grid-template-columns: minmax(0, 1fr); gap: 28px; }
   .role { grid-template-columns: minmax(0, 1fr); gap: 8px; }
   .role-when { flex-direction: row; flex-wrap: wrap; gap: 4px 16px; padding-top: 0; }
 }
