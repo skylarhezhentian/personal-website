@@ -3,240 +3,204 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Skylar Tian | Mathematics &amp; Computer Science, Columbia</title>
-  <meta name="description" content="Skylar Tian is a Mathematics and Computer Science student at Columbia University working on quantitative research, statistical modeling, and trading.">
+  <title>Skylar Tian</title>
+  <meta name="description" content="Skylar Tian studies Mathematics and Computer Science at Columbia and is looking for quantitative research and trading roles.">
   <meta property="og:title" content="Skylar Tian">
-  <meta property="og:description" content="Mathematics & Computer Science at Columbia. Quantitative research, statistical modeling, and trading.">
+  <meta property="og:description" content="Mathematics & Computer Science at Columbia. Quantitative research, statistical modeling, and music.">
   <meta property="og:type" content="website">
+  <meta property="og:image" content="https://skylarhezhentian.github.io/personal-website/assets/img/portrait.jpg">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..700;1,6..96,400..700&family=Caveat:wght@500;600&family=DM+Mono:wght@400;500&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <script>try{var t=localStorage.getItem("theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
 </head>
 <body>
-  <header class="nav">
-    <div class="nav-inner">
-      <a class="brand" href="#top">Skylar Tian</a>
-      <nav aria-label="Sections">
-        <a href="#experience">Experience</a>
-        <a href="#research">Research</a>
-        <a href="#education">Education</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="wordmark" href="index.html">Skylar <em>Tian</em></a>
+      <nav class="site-nav" aria-label="Main">
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="experience.html">Experience</a>
+        <a href="research.html">Research</a>
+        <a href="music.html">Music</a>
       </nav>
-      <button class="theme-toggle" type="button" aria-label="Toggle dark mode" title="Toggle theme">
-        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.39 5.39 0 0 1-4.4 2.26 5.4 5.4 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg>
-      </button>
+      <div class="header-actions">
+        <a class="btn btn-rose btn-small" href="#contact">Contact</a>
+        <button class="theme-toggle" type="button" aria-label="Switch between light and dark theme">
+          <svg class="moon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.39 5.39 0 0 1-4.4 2.26 5.4 5.4 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg>
+          <svg class="sun" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="4.5" fill="currentColor"/><path stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg>
+        </button>
+      </div>
     </div>
   </header>
 
-  <main id="top">
+  <main id="main">
     <section class="hero">
-      <canvas id="walk" aria-hidden="true"></canvas>
-      <div class="container hero-content">
-        <p class="eyebrow">Mathematics &amp; Computer Science · Columbia University · Class of 2028</p>
-        <h1>Skylar Tian</h1>
-        <p class="lede">
-          I build models that turn noisy data into decisions. My work spans factor research on
-          Chinese equities, latent-state models of neural dynamics, and optimization under
-          real-world constraints. I'm looking for opportunities in
-          <strong>quantitative research and trading</strong>.
-        </p>
-        <div class="cta">
-          <a class="btn primary" href="mailto:h.tian@columbia.edu">Email me</a>
-          <a class="btn" href="#experience">View experience</a>
+      <div class="wrap">
+        <div class="hero-grid">
+          <div class="hero-text">
+            <p class="hello">hi, I'm <i class="heart" aria-hidden="true"></i></p>
+            <h1 class="name">Skylar <em>Tian</em></h1>
+            <p class="kicker">Mathematics &amp; Computer Science · Columbia University · Class of 2028</p>
+            <p class="intro">
+              I study math and computer science at Columbia and work on statistical modeling, from
+              factor models on Chinese A-shares to brain-state models of neural recordings. I trained in
+              market-making at Jane Street, and I'm looking for
+              <mark class="hl">quantitative research and trading</mark> roles.
+            </p>
+            <div class="actions">
+              <a class="btn btn-rose" href="mailto:h.tian@columbia.edu">Email me</a>
+              <a class="btn btn-ghost" href="research.html">See my research</a>
+            </div>
+          </div>
+          <figure class="arch hero-photo">
+            <img src="assets/img/portrait.jpg" width="988" height="1500" alt="Skylar Tian seated on the floor, holding a fluffy cat, beside a strawberry cake">
+          </figure>
         </div>
-        <dl class="stats">
-          <div><dt>GPA</dt><dd>3.94</dd></div>
-          <div><dt>AIME</dt><dd>11/15</dd></div>
-          <div><dt>USAMO</dt><dd>Participant</dd></div>
-          <div><dt>Laidlaw</dt><dd>Scholar</dd></div>
-        </dl>
+
+        <div class="staff-band">
+          <canvas class="staff" data-labels data-animate aria-hidden="true"></canvas>
+        </div>
+
+        <ul class="stats">
+          <li class="stat">
+            <span class="stat-big">3.94</span>
+            <span class="stat-cap">GPA</span>
+            <span class="stat-note">Dean's List every semester</span>
+          </li>
+          <li class="stat">
+            <span class="stat-big">USAMO</span>
+            <span class="stat-cap">Participant</span>
+            <span class="stat-note">USA Mathematical Olympiad</span>
+          </li>
+          <li class="stat">
+            <span class="stat-big">11/15</span>
+            <span class="stat-cap">AIME</span>
+            <span class="stat-note">Also a USAPhO qualifier</span>
+          </li>
+          <li class="stat">
+            <span class="stat-big">Laidlaw</span>
+            <span class="stat-cap">Scholar</span>
+            <span class="stat-note">1 of 25 at Columbia College</span>
+          </li>
+        </ul>
       </div>
     </section>
 
-    <section id="experience" class="section">
-      <div class="container">
-        <h2 class="section-title"><span class="idx">01</span>Experience</h2>
-
-        <article class="role">
-          <div class="role-head">
-            <div>
-              <h3>E Fund Management</h3>
-              <p class="role-title">Quantitative Research Winter Analyst</p>
-            </div>
-            <p class="meta">Dec 2025 – Feb 2026<br>Hong Kong</p>
+    <section class="section">
+      <div class="wrap">
+        <header class="section-head">
+          <div>
+            <p class="eyebrow">Selected work</p>
+            <h2>Models I've built</h2>
           </div>
-          <ul>
-            <li>Replicated the Carhart four-factor and Fama–French five-factor asset pricing models on Chinese A-share equities, adapting factor construction, portfolio formation, and regression frameworks to the market's structure and regulatory environment.</li>
-          </ul>
-          <div class="project">
-            <p class="project-label">Project · Deviation Salience Trading Strategy</p>
-            <ul>
-              <li>Built a reproducible Python pipeline over Chinese equities from 2021–2025, constructing industry-relative salience signals and double-sorted portfolios to test next-month momentum and reversal under equal and value weighting.</li>
-              <li>Evaluated seven portfolio specifications with Fama–MacBeth regressions controlling for size, momentum, and volatility, using Newey–West inference and missing-return sensitivity tests.</li>
-            </ul>
-          </div>
-          <ul class="tags"><li>Factor models</li><li>Fama–MacBeth</li><li>Newey–West</li><li>Python</li></ul>
-        </article>
+          <a class="more" href="research.html">All research &rarr;</a>
+        </header>
 
-        <article class="role">
-          <div class="role-head">
-            <div>
-              <h3>Jane Street</h3>
-              <p class="role-title">Participant, WiSE Program</p>
-            </div>
-            <p class="meta">Jun 2025 – Jul 2025<br>New York, NY</p>
-          </div>
-          <ul>
-            <li>Selected as 1 of 100 students for an intensive training program on trading, market-making, and decision theory.</li>
-            <li>Built and analyzed cross-sector trading models in simulated markets using probability, expected value, and capital allocation.</li>
-          </ul>
-          <ul class="tags"><li>Market-making</li><li>Expected value</li><li>Decision theory</li></ul>
-        </article>
-
-        <article class="role">
-          <div class="role-head">
-            <div>
-              <h3>Laidlaw Foundation</h3>
-              <p class="role-title">Student Researcher, Applied Mathematics</p>
-            </div>
-            <p class="meta">May 2026 – Aug 2026<br>New York, NY</p>
-          </div>
-          <ul>
-            <li>Built a Python / Google OR-Tools routing model for 528 NYC food pantries and community kitchens, integrating OSRM travel times, vehicle capacities, and service windows to compare five allocation policies weighted by food insecurity rate.</li>
-            <li>Quantified the equity–reach tradeoff across five solves per policy: need-prioritized routing raised median coverage of high-need demand from <strong>26.3% to 57.7%</strong> with a marginal decrease in reach, and was stress-tested with skip-penalty perturbations.</li>
-          </ul>
-          <ul class="tags"><li>Optimization</li><li>OR-Tools</li><li>Sensitivity analysis</li></ul>
-        </article>
-
-        <article class="role">
-          <div class="role-head">
-            <div>
-              <h3>XPulse</h3>
-              <p class="role-title">Software Developer</p>
-            </div>
-            <p class="meta">May 2026 – Present<br>New York, NY</p>
-          </div>
-          <ul>
-            <li>Engineered a weekly publishing pipeline on FastAPI, Supabase PostgreSQL, and Railway workers, with scheduling and concurrency controls to coordinate background tasks.</li>
-            <li>Upgraded content selection and OpenAI speech generation to newer audio models and added Mutagen duration validation holding episodes to 15–20 minutes, reducing cross-episode variability.</li>
-            <li>Automated cover-art generation with reference-conditioned Gemini prompts and validation of image integrity, anatomy, framing, and provenance, with push-notification review gating publication.</li>
-          </ul>
-          <ul class="tags"><li>FastAPI</li><li>PostgreSQL</li><li>Pipelines</li></ul>
-        </article>
-      </div>
-    </section>
-
-    <section id="research" class="section alt">
-      <div class="container">
-        <h2 class="section-title"><span class="idx">02</span>Research</h2>
-
-        <article class="role">
-          <div class="role-head">
-            <div>
-              <h3>Columbia Zuckerman Institute</h3>
-              <p class="role-title">Undergraduate Researcher, Computational Neuroscience · Paninski Lab</p>
-            </div>
-            <p class="meta">Jun 2026 – Present<br>New York, NY</p>
-          </div>
-          <p>Selected as 1 of 10 students for a competitive research program working with computational neuroscientist Liam Paninski.</p>
-          <div class="project">
-            <p class="project-label">Project · Neural Dynamics and Behavior Prediction</p>
-            <ul>
-              <li>Benchmarked local field potential representations from lfpack and autoencoder models against raw recordings, preserving neural dynamics at high temporal resolution with a <strong>95% reduction</strong> in spatial dimension.</li>
-              <li>Modeled simultaneous multi-region recordings with shared and region-specific latent components, including HMMs and switching linear dynamical systems, to study global and local dynamics across spatial scales.</li>
-              <li>Ongoing: comparing continuous, discrete, and hierarchical brain-state models to characterize dimensionality and timescales, toward a dynamic brain atlas.</li>
-            </ul>
-          </div>
-          <ul class="tags"><li>State-space models</li><li>HMM / SLDS</li><li>Dimensionality reduction</li></ul>
-        </article>
-
-        <div class="cards">
-          <article class="card">
-            <p class="project-label">Columbia Alpha Partners · Treasurer</p>
-            <h3>Copper structural pricing model</h3>
-            <p>Led an investment pod's copper research, translating geopolitical supply disruptions and demand from AI data centers, EVs, and grid infrastructure into a structural pricing model estimated with 500 Monte Carlo simulations.</p>
-          </article>
-          <article class="card">
-            <p class="project-label">E Fund Management</p>
+        <div class="work-grid">
+          <a class="work" href="research.html#salience">
+            <p class="work-org">E Fund Management · Hong Kong</p>
             <h3>Deviation salience strategy</h3>
-            <p>Industry-relative salience signals and double-sorted portfolios on A-shares, 2021–2025, tested for next-month momentum and reversal across seven specifications.</p>
-          </article>
-          <article class="card">
-            <p class="project-label">Laidlaw Foundation</p>
+            <p>Industry-relative salience signals and double-sorted portfolios on Chinese A-shares, tested with Fama–MacBeth regressions and Newey–West inference.</p>
+            <p class="work-figure"><strong>7</strong><span>portfolio specifications</span></p>
+          </a>
+          <a class="work" href="research.html#neural">
+            <p class="work-org">Zuckerman Institute · Paninski Lab</p>
+            <h3>Neural dynamics and behavior</h3>
+            <p>Compressed local field potential recordings, then modeled shared and region-specific brain states with HMMs and switching linear dynamical systems.</p>
+            <p class="work-figure"><strong>95%</strong><span>fewer spatial dimensions</span></p>
+          </a>
+          <a class="work" href="research.html#routing">
+            <p class="work-org">Laidlaw Foundation · New York</p>
             <h3>Equitable food routing</h3>
-            <p>Vehicle-routing model over 528 NYC sites comparing five allocation policies; need-prioritized routing more than doubled high-need coverage.</p>
-          </article>
+            <p>A vehicle-routing model over 528 NYC food pantries and community kitchens, comparing five allocation policies weighted by food insecurity.</p>
+            <p class="work-figure"><strong>57.7%</strong><span>high-need coverage, up from 26.3%</span></p>
+          </a>
+          <a class="work" href="research.html#copper">
+            <p class="work-org">Columbia Alpha Partners</p>
+            <h3>Structural copper pricing</h3>
+            <p>Turned supply disruptions and demand from AI data centers, electric vehicles and grid build-out into a structural model of the copper price.</p>
+            <p class="work-figure"><strong>500</strong><span>Monte Carlo simulations</span></p>
+          </a>
         </div>
       </div>
     </section>
 
-    <section id="education" class="section">
-      <div class="container">
-        <h2 class="section-title"><span class="idx">03</span>Education</h2>
-        <article class="role">
-          <div class="role-head">
-            <div>
-              <h3>Columbia College, Columbia University</h3>
-              <p class="role-title">B.A. in Mathematics &amp; Computer Science</p>
-            </div>
-            <p class="meta">Class of 2028<br>New York, NY</p>
-          </div>
-          <ul>
-            <li><strong>GPA 3.94 / 4.00</strong> · Dean's List, all semesters</li>
-            <li>Laidlaw Scholar, 1 of 25 students at Columbia College</li>
-          </ul>
-          <p class="project-label">Coursework</p>
-          <ul class="tags"><li>Probability Theory</li><li>Statistical Inference</li><li>Machine Learning</li><li>Linear Algebra</li><li>Fourier Analysis</li><li>Topology</li></ul>
-          <p class="project-label">Pre-college</p>
-          <ul>
-            <li>USAMO participant · AIME 11/15 · USAPhO qualifier</li>
-            <li>Stanford University Mathematics Camp (SUMaC) · SAT 1590/1600</li>
-          </ul>
-        </article>
+    <section class="section section-alt">
+      <div class="wrap video-split">
+        <div class="copy">
+          <p class="eyebrow">Video</p>
+          <h2>A two&#8209;minute hello</h2>
+          <p>Drone footage, representing the math department at open house, and friends. It first ran on my old website.</p>
+        </div>
+        <figure class="video-frame">
+          <video controls playsinline preload="none" poster="assets/img/intro-poster.jpg" width="1280" height="720">
+            <source src="assets/video/intro.mp4" type="video/mp4">
+          </video>
+        </figure>
       </div>
     </section>
 
-    <section id="skills" class="section alt">
-      <div class="container">
-        <h2 class="section-title"><span class="idx">04</span>Skills &amp; Interests</h2>
-        <div class="grid-2">
+    <section class="section">
+      <div class="wrap">
+        <header class="section-head">
           <div>
-            <h3 class="sub">Technical</h3>
-            <ul class="tags big"><li>Python</li><li>pandas</li><li>NumPy</li><li>Matplotlib</li><li>SQL</li><li>Java</li><li>MATLAB</li><li>Excel</li></ul>
-            <h3 class="sub">Methods</h3>
-            <ul class="tags big"><li>Asset pricing &amp; factor models</li><li>Panel regression</li><li>Monte Carlo</li><li>Latent-state models</li><li>Combinatorial optimization</li></ul>
+            <p class="eyebrow">Off the clock</p>
+            <h2>Life outside the models</h2>
           </div>
-          <div>
-            <h3 class="sub">Beyond work</h3>
-            <ul class="plain">
-              <li><span>Columbia Sailing Team</span></li>
-              <li><span>Classical music: harp, operatic singing, flute, guitar, piano</span></li>
-              <li><span>Undergraduate Math Journal</span></li>
-              <li><span>Executive Board Treasurer, Columbia Alpha Partners</span></li>
+          <a class="more" href="music.html">Watch my performances &rarr;</a>
+        </header>
+
+        <div class="gallery">
+          <figure class="g-wide g-tall"><img src="assets/img/choir.jpg" width="1400" height="933" loading="lazy" alt="Skylar singing a solo in front of a choir"></figure>
+          <figure class="g-wide g-tall"><img src="assets/img/beach.jpg" width="1400" height="1050" loading="lazy" alt="Skylar jumping on a beach under a blue sky"></figure>
+          <figure class="g-tall"><img src="assets/img/track.jpg" width="825" height="1100" loading="lazy" alt="Skylar and a friend on a running track"></figure>
+          <figure class="g-tall"><img src="assets/img/daisies.jpg" width="825" height="1100" loading="lazy" alt="Skylar and a friend with a crown of daisies"></figure>
+          <figure class="g-tall"><img src="assets/img/friend.jpg" width="825" height="1100" loading="lazy" alt="Skylar and a friend taking a selfie"></figure>
+          <figure class="g-tall"><img src="assets/img/group.jpg" width="825" height="1100" loading="lazy" alt="Skylar with a group of friends"></figure>
+          <figure class="g-wide g-tall"><img src="assets/img/seaside.jpg" width="1200" height="900" loading="lazy" alt="Skylar on a rocky shoreline on a sunny day"></figure>
+          <div class="note">
+            <h3>Outside class</h3>
+            <ul>
+              <li>Columbia Sailing Team</li>
+              <li>Harp, operatic singing, flute, guitar and piano</li>
+              <li>Undergraduate Math Journal</li>
+              <li>Treasurer, Columbia Alpha Partners</li>
             </ul>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="contact" class="section contact">
-      <div class="container">
-        <h2 class="section-title"><span class="idx">05</span>Contact</h2>
-        <p class="lede">I'm open to quantitative research and trading internships and full-time conversations. The fastest way to reach me is email.</p>
-        <div class="cta">
-          <a class="btn primary" href="mailto:h.tian@columbia.edu">h.tian@columbia.edu</a>
-          <a class="btn" href="https://github.com/skylarhezhentian" rel="noopener">GitHub</a>
+    <section class="contact" id="contact">
+      <div class="wrap contact-inner">
+        <h2>Let's <em>talk</em></h2>
+        <div class="contact-body">
+          <p>I'm looking for quantitative research and trading roles. Email is the fastest way to reach me.</p>
+          <a class="contact-email" href="mailto:h.tian@columbia.edu">h.tian@columbia.edu</a>
+          <ul class="contact-links">
+            <li>New York, NY</li>
+            <li><a href="https://github.com/skylarhezhentian">GitHub</a></li>
+            <li>Columbia College '28</li>
+          </ul>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="footer">
-    <div class="container">
-      <p>© <span id="year">2026</span> Skylar Tian · New York, NY</p>
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <p>© <span data-year>2026</span> Skylar Tian · New York, NY <i class="heart" aria-hidden="true"></i></p>
+      <nav aria-label="Footer">
+        <a href="experience.html">Experience</a>
+        <a href="research.html">Research</a>
+        <a href="music.html">Music</a>
+        <a href="mailto:h.tian@columbia.edu">Email</a>
+      </nav>
     </div>
   </footer>
 

@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Research · Skylar Tian</title>
+  <meta name="description" content="Skylar Tian's research: factor strategies on Chinese A-shares, neural dynamics, equitable food routing, and a structural copper pricing model.">
+  <meta property="og:title" content="Research · Skylar Tian">
+  <meta property="og:image" content="https://skylarhezhentian.github.io/personal-website/assets/img/studying.jpg">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..700;1,6..96,400..700&family=Caveat:wght@500;600&family=DM+Mono:wght@400;500&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script>try{var t=localStorage.getItem("theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="wordmark" href="index.html">Skylar <em>Tian</em></a>
+      <nav class="site-nav" aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="experience.html">Experience</a>
+        <a href="research.html" aria-current="page">Research</a>
+        <a href="music.html">Music</a>
+      </nav>
+      <div class="header-actions">
+        <a class="btn btn-rose btn-small" href="index.html#contact">Contact</a>
+        <button class="theme-toggle" type="button" aria-label="Switch between light and dark theme">
+          <svg class="moon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.39 5.39 0 0 1-4.4 2.26 5.4 5.4 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg>
+          <svg class="sun" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="4.5" fill="currentColor"/><path stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-head">
+      <div class="wrap">
+        <div class="page-head-grid">
+          <div class="title-block">
+            <p class="hello">math, applied <i class="heart" aria-hidden="true"></i></p>
+            <h1 class="page-title">Research</h1>
+            <p class="lede">Four projects across markets, neuroscience and operations research. Each one starts with a question and ends with a model I can test.</p>
+          </div>
+          <figure class="arch squat">
+            <img src="assets/img/studying.jpg" width="1011" height="1100" alt="Skylar writing in a notebook at an outdoor table on a sunny day">
+          </figure>
+        </div>
+        <canvas class="staff staff-sm" aria-hidden="true"></canvas>
+      </div>
+    </section>
+
+    <div class="wrap">
+      <article class="project" id="salience">
+        <div class="project-main">
+          <p class="eyebrow">E Fund Management · Hong Kong · Dec 2025 – Feb 2026</p>
+          <h2>Deviation salience trading strategy</h2>
+          <p class="question">Do industry-relative salience signals predict next-month momentum or reversal in Chinese A-shares?</p>
+          <h3>Groundwork</h3>
+          <p>Replicated the Carhart four-factor and Fama–French five-factor models on A-shares, adapting factor construction, portfolio formation and regressions to the market's structure and regulatory environment.</p>
+          <h3>Method</h3>
+          <ul>
+            <li>A reproducible Python pipeline over Chinese equities from 2021 to 2025.</li>
+            <li>Industry-relative salience signals and double-sorted portfolios under equal and value weighting.</li>
+            <li>Seven portfolio specifications, with Fama–MacBeth regressions controlling for size, momentum and volatility.</li>
+            <li>Newey–West inference and missing-return sensitivity tests to check the return patterns across weighting schemes.</li>
+          </ul>
+        </div>
+        <aside class="facts" aria-label="Project facts">
+          <div>
+            <p class="big">7</p>
+            <p class="big-cap">portfolio specifications</p>
+          </div>
+          <dl>
+            <div><dt>Universe</dt><dd>Chinese A-shares</dd></div>
+            <div><dt>Period</dt><dd>2021–2025</dd></div>
+            <div><dt>Weighting</dt><dd>Equal and value</dd></div>
+            <div><dt>Inference</dt><dd>Fama–MacBeth, Newey–West</dd></div>
+            <div><dt>Controls</dt><dd>Size, momentum, volatility</dd></div>
+          </dl>
+        </aside>
+      </article>
+
+      <article class="project" id="neural">
+        <div class="project-main">
+          <p class="eyebrow">Columbia Zuckerman Institute · Jun 2026 – Present</p>
+          <h2>Neural dynamics and behavior prediction</h2>
+          <p class="question">Can compressed recordings keep the brain's fast dynamics, and do global brain states change what individual regions compute?</p>
+          <h3>Compression</h3>
+          <p>Benchmarked local field potential representations from lfpack and autoencoder models against raw recordings. They preserved neural dynamics at high temporal resolution with a 95% reduction in spatial dimension.</p>
+          <h3>Modeling</h3>
+          <p>Modeled simultaneous recordings across brain regions with shared and region-specific latent components, including hidden Markov models and switching linear dynamical systems, to study global and local dynamics across spatial scales.</p>
+          <h3>Now</h3>
+          <p>Comparing continuous, discrete and hierarchical brain-state models to characterize dimensionality and timescales, and testing whether global states modulate regional inputs, local computations, or both. The goal is a dynamic brain atlas.</p>
+        </div>
+        <aside class="facts" aria-label="Project facts">
+          <div>
+            <p class="big">95%</p>
+            <p class="big-cap">reduction in spatial dimension</p>
+          </div>
+          <dl>
+            <div><dt>Lab</dt><dd>Liam Paninski</dd></div>
+            <div><dt>Program</dt><dd>1 of 10 students selected</dd></div>
+            <div><dt>Data</dt><dd>Multi-region local field potentials</dd></div>
+            <div><dt>Models</dt><dd>HMM, SLDS, autoencoders</dd></div>
+            <div><dt>Status</dt><dd>Ongoing</dd></div>
+          </dl>
+        </aside>
+      </article>
+
+      <article class="project" id="routing">
+        <div class="project-main">
+          <p class="eyebrow">Laidlaw Foundation · New York · May – Aug 2026</p>
+          <h2>Equitable food routing in New York City</h2>
+          <p class="question">If delivery routes prioritize need, how much more high-need demand do they reach, and what does that cost in total reach?</p>
+          <h3>Model</h3>
+          <p>A Python and Google OR-Tools vehicle-routing model over 528 NYC food pantries and community kitchens, with OSRM travel times, vehicle capacities and service windows.</p>
+          <h3>Experiment</h3>
+          <p>Five allocation policies that incorporate food insecurity rates, solved five times each, with skip-penalty perturbations to test sensitivity.</p>
+          <h3>Result</h3>
+          <p>Need-prioritized routing raised median coverage of high-need demand from 26.3% to 57.7%, with only a marginal decrease in total reach.</p>
+        </div>
+        <aside class="facts" aria-label="Project facts">
+          <div class="bars" role="img" aria-label="Median coverage of high-need demand: baseline policy 26.3 percent, need-prioritized 57.7 percent">
+            <p class="big-cap">Median high-need coverage</p>
+            <div class="bar-row">
+              <span class="label">Baseline policy</span><span class="val">26.3%</span>
+              <div class="bar-track"><div class="bar-fill" style="width: 26.3%"></div></div>
+            </div>
+            <div class="bar-row">
+              <span class="label">Need-prioritized</span><span class="val">57.7%</span>
+              <div class="bar-track"><div class="bar-fill rose" style="width: 57.7%"></div></div>
+            </div>
+            <div class="axis"><span>0%</span><span>50%</span><span>100%</span></div>
+          </div>
+          <dl>
+            <div><dt>Sites</dt><dd>528 pantries and kitchens</dd></div>
+            <div><dt>Policies</dt><dd>5, five solves each</dd></div>
+            <div><dt>Inputs</dt><dd>OSRM travel times, capacities, service windows</dd></div>
+            <div><dt>Tools</dt><dd>Python, Google OR-Tools</dd></div>
+          </dl>
+        </aside>
+      </article>
+
+      <article class="project" id="copper">
+        <div class="project-main">
+          <p class="eyebrow">Columbia Alpha Partners · Sep 2025 – Present</p>
+          <h2>A structural model of copper prices</h2>
+          <p class="question">What happens to copper when supply is disrupted while AI data centers, electric vehicles and grid build-out all add demand?</p>
+          <h3>Approach</h3>
+          <p>Led an investment pod's copper research, translating geopolitical supply disruptions and these new demand sources into a structural pricing model, then estimating it with 500 Monte Carlo simulations.</p>
+        </div>
+        <aside class="facts" aria-label="Project facts">
+          <div>
+            <p class="big">500</p>
+            <p class="big-cap">Monte Carlo simulations</p>
+          </div>
+          <dl>
+            <div><dt>Role</dt><dd>Led the pod's research</dd></div>
+            <div><dt>Supply</dt><dd>Geopolitical disruptions</dd></div>
+            <div><dt>Demand</dt><dd>AI data centers, EVs, grid</dd></div>
+            <div><dt>Method</dt><dd>Structural model, Monte Carlo</dd></div>
+          </dl>
+        </aside>
+      </article>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <p>© <span data-year>2026</span> Skylar Tian · New York, NY <i class="heart" aria-hidden="true"></i></p>
+      <nav aria-label="Footer">
+        <a href="index.html">Home</a>
+        <a href="experience.html">Experience</a>
+        <a href="music.html">Music</a>
+        <a href="mailto:h.tian@columbia.edu">Email</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
