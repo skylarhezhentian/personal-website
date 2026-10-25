@@ -5,13 +5,14 @@ with pages for Home, Research, Experience and Music.
 
 ## Files
 
-- `index.html`: home page with intro, coursework, highlights, and short Research, Experience and Music sections
+- `index.html`: home page with intro, highlights, and short Research, Experience and Music sections
 - `research.html`: a plucked string and its first four normal modes, then a timeline of my research
 - `experience.html`: finance, software and other industry-related roles, plus leadership and activities
 - `music.html`: a recorded performance, embedded from YouTube
 - `style.css`: all styles, with a light theme (default) and a dark theme
-- `script.js`: theme toggle and the plucked-string animation (a solution of the wave equation)
+- `script.js`: theme toggle, the plucked-string animation (a solution of the wave equation) and the click-to-play video cover
 - `assets/img/`: photos and artwork, resized for the web
+- `assets/Skylar-Tian-Resume.pdf`: the resume behind the Resume button on the home page
 
 ## Preview locally
 
@@ -31,6 +32,5 @@ the domain's DNS at GitHub Pages.
 
 ## Editing
 
-All text lives directly in the four HTML files. To add a resume download, export a PDF to
-`assets/resume.pdf` and add `<a class="btn btn-ghost" href="assets/resume.pdf">Resume (PDF)</a>`
-next to the "Email me" button in `index.html`.
+All text lives directly in the four HTML files. To update the resume, replace
+`assets/Skylar-Tian-Resume.pdf` with a new PDF of the same name.
