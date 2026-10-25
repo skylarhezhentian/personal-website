@@ -12,7 +12,7 @@
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..700;1,6..96,400..700&family=Caveat:wght@500;600&family=DM+Mono:wght@400;500&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400..700&family=Caveat:wght@500;600&family=DM+Mono:wght@400;500&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <script>try{var t=localStorage.getItem("theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
 </head>
@@ -45,13 +45,22 @@
           <div class="hero-text">
             <p class="hello">hi, I'm <i class="heart" aria-hidden="true"></i></p>
             <h1 class="name">Skylar <em>Tian</em></h1>
-            <p class="kicker">Mathematics &amp; Computer Science · Columbia University · Class of 2028</p>
+            <p class="kicker">Mathematics &amp; Computer Science · Columbia University</p>
             <p class="intro">
-              I study math and computer science at Columbia and work on statistical modeling, from
-              factor models on Chinese A-shares to brain-state models of neural recordings. I trained in
-              market-making at Jane Street, and I'm looking for
-              <mark class="hl">quantitative research and trading</mark> roles.
+              I study pure mathematics and computer science at Columbia College. I enjoy problem solving
+              and music, and I have competed in the <mark class="hl">USAMO and the Putnam</mark>.
             </p>
+            <div class="coursework">
+              <p class="coursework-label">Relevant coursework</p>
+              <ul class="chips">
+                <li>Topology</li>
+                <li>Fourier Analysis</li>
+                <li>Machine Learning</li>
+                <li>Statistical Inference</li>
+                <li>Probability Theory</li>
+                <li>Linear Algebra</li>
+              </ul>
+            </div>
             <div class="actions">
               <a class="btn btn-rose" href="mailto:h.tian@columbia.edu">Email me</a>
               <a class="btn btn-ghost" href="research.html">See my research</a>
@@ -63,7 +72,8 @@
         </div>
 
         <div class="staff-band">
-          <canvas class="staff" data-labels data-animate aria-hidden="true"></canvas>
+          <canvas class="staff" data-mode="string" data-animate aria-hidden="true"></canvas>
+          <p class="staff-caption">A plucked string, moving as the wave equation predicts. <a href="research.html">See the math &rarr;</a></p>
         </div>
 
         <ul class="stats">
@@ -186,7 +196,6 @@
           <ul class="contact-links">
             <li>New York, NY</li>
             <li><a href="https://github.com/skylarhezhentian">GitHub</a></li>
-            <li>Columbia College '28</li>
           </ul>
         </div>
       </div>

@@ -7,12 +7,13 @@ with pages for Home, Experience, Research and Music.
 
 - `index.html`: home page with intro, highlights, selected work, intro video and photos
 - `experience.html`: roles, education and skills from my resume
-- `research.html`: write-ups of four research projects
+- `research.html`: the wave equation and its normal modes, then a timeline of my research
 - `music.html`: recorded performances and instruments
 - `style.css`: all styles, with a light theme (default) and a dark theme
-- `script.js`: theme toggle and the five-line "harmonics" staff drawn on each page
+- `script.js`: theme toggle and the plucked-string animation (a solution of the wave equation)
 - `assets/img/`: photos and artwork, resized for the web
 - `assets/video/`: intro and performance videos, compressed to 720p (one performance is embedded from YouTube)
+- `assets/katex/`: KaTeX stylesheet and fonts for the equations on the Research page (the equations are pre-rendered into the HTML)
 
 ## Preview locally
 
